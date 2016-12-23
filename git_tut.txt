@@ -25,6 +25,11 @@ to share our info we should use
 main different when we use clone we just copy local info to remote repo
 > git clone
  but pull = ferch + merge
+how to understand your current branch use >git branch or >git status or >git branch -r
+so, don't forget every ocmmit can be uniquely identified by its id, Every commit's HISTORY can be uniquely identified by its id
+
+
+
 
 
 
