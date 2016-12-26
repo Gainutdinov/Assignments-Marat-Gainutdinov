@@ -1,0 +1,16 @@
+http://rogerdudler.github.io/git-guide/
+
+git pull
+git merge <branch> #used to merge another branch into your active branch (e.g. master)
+git add <filename> #You are responsible to merge those conflicts manually by editing the files shown by git.
+git diff <source_branch> <target_branch> #before merging changes, you can also preview them by using
+git tag 1.0.0 1b2e1d63ff #it's recommended to create tags for software releases. also known as SVN (Subversion)
+git log #to get history log
+git log --author=bob #etc
+git log --pretty=oneline
+git log --graph --oneline --decorate --all
+git checkout -- <filename> #to move between commits
+git fetch origin    # fetch the latest history from the server
+git reset --hard origin/master   #and point our local master branch at it like this
+
+

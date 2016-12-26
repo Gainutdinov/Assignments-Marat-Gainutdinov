@@ -1,0 +1,59 @@
+Linux/Mac OSX							Windows
+pwd							pwd							
+    	print working directory					print working directory							
+hostname						hostname	
+    my computer's network name				        my computer's network name			
+mkdir							mkdir
+    make directory						make directory		
+cd							cd
+    change directory						change directory		
+ls							ls
+    list directory						list directory		
+rmdir							rmdir
+    remove directory						remove directory		
+pushd							pushd
+    push directory						push directory		
+popd							popd
+    pop directory						pop directory		
+cp							cp
+    copy a file or directory					copy a file or directory			
+mv							robocopy
+    move a file or directory					robust copy		
+less							mv
+    page through a file						move a file or directory		
+cat							more
+    print the whole file					page through a file			
+xargs							type
+    execute arguments						print the whole file		
+find							forfiles
+    find files							run a command on lots of files
+grep							dir -r
+    find things inside files					find files			
+man							select-string
+    read a manual page						find things inside files	
+apropos							help
+    find what man page is appropriate				read a manual page				
+env							helpctr
+    look at your environment					find what man page is appropriate			
+echo							echo
+    print some arguments					print some arguments			
+export							set
+    export/set a new environment variable			export/set a new environment variable					
+exit							exit
+    exit the shell						exit the shell		
+sudo							runas
+    DANGER! become super user root DANGER!			DANGER! become super user root DANGER!
+					
+
+
+
+
+
+
+
+
+
+
+
+
+

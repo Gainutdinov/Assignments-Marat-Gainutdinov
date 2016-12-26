@@ -1,0 +1,2 @@
+Git is a distributed version control system originally developed to manage Linux source codes.
+Finished reading just a tiny introduction to the Git.

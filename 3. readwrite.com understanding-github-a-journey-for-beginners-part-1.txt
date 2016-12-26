@@ -1,0 +1,33 @@
+GitHub For Beginners: Commit, Push And Go
+mkdir ~/MyProject
+cd ~/MyProject
+git init
+touch Readme.txt
+git status #to check status of the repo
+git add Readme.txt
+git commit -m “Add Readme.txt” #The -m flag simply indicates that the following text should be read as a message.
+git remote add origin https://github.com/Gainutdinov/first-project.git #add origin (remote) repo to your local repo
+git remote -v #This command gives you a list of all the remote origins your local repository knows about.
+git push --set-upstream origin master #to "push" our repo to the origin (remote) repo
+And finally we will get all our local changes be copied to origin repo.
+
+Repository
+Version Control
+Commit (Snapshot)
+Branch (to merge two branches we use "merge")
+
+git init #only after that command a folder will become a git repo
+git config  #Short for “configure,” this is most useful when you’re setting up Git for the first time.
+git add #After you add files, they’re included in Git’s “snapshots” of the repository.
+git commit -m "My message" #After you make any sort of change, you input this in order to take a “snapshot” of the repository
+git branch cats #This command will let you build a new branch
+git checkout master #navigational command that lets you move to the repository you want to check branch or repo.
+git merge cats #would take all the changes you made to the “cats” branch and add them to the master.
+git push #you “push” the changes up to GitHub with this command
+git pull #you “pull” the changes down from GitHub with this command
+git remote -v #manage the set of repositories ("remotes") whose branches you track.
+
+git config --global user.name "Gaynetdin"
+git config --global user.email "m.gaynutdinov@mail.ru"
+
+
