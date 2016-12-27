@@ -2,18 +2,16 @@ http://blog.udacity.com/2015/06/a-beginners-git-github-tutorial.html
 
 Fundamentals:
 
-
-git pull
-git merge <branch> #used to merge another branch into your active branch (e.g. master)
-git add <filename> #You are responsible to merge those conflicts manually by editing the files shown by git.
-git diff <source_branch> <target_branch> #before merging changes, you can also preview them by using
-git tag 1.0.0 1b2e1d63ff #it's recommended to create tags for software releases. also known as SVN (Subversion)
-git log #to get history log
-git log --author=bob #etc
-git log --pretty=oneline
-git log --graph --oneline --decorate --all
-git checkout -- <filename> #to move between commits
-git fetch origin    # fetch the latest history from the server
-git reset --hard origin/master   #and point our local master branch at it like this
+git clone https://github.com/Gainutdinov/Assignments-Marat-Gainutdinov.git #copied to machine my remote repo with all branches
+git status #checkout status, nothing changed
+#added my own new file "5.blog.udacity.com201506a-beginners-git-github-tutorial.txt"
+git add 5.blog.udacity.com201506a-beginners-git-github-tutorial.txt #added file for tracking
+#i will modified it during the all udacity tutorial
+git config --global core.editor "atom --wait" #added as a default editor free Atom editor
+git config core.editor notepad #changed default editor to simple notepad, a lot issues with compatibility on windows
+git status # as usual, checking current status
+git log --oneline #lets check our git history
+git checkout -b 2nd-week #created new branch named it "2nd-week"
+finally some information about Github and with website's interface: how to create from exactly the same things: add file, commit, create new repo
 
 
