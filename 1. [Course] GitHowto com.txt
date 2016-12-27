@@ -1,0 +1,598 @@
+1. Preparation
+git config --global user.name "Gaynetdin"
+git config --global user.email "m.gaynutdinov@mail.ru"
+git config --global core.autocrlf true #in case you use Windows end of the string will convert into the CRLF instead of LF
+git config --global core.safecrlf true #git autom.converts CRLF->LF in commit and reverse LF->CRLF while l
+oading files form remote repo (if you use Windows)
+for Unix/Mac users use:
+git config --global core.autocrlf input
+git config --global core.safecrlf true
+
+2. The final preparation
+Nothing interesting
+
+3. Creating a Project
+mkdir hello
+cd hello
+touch hello.html
+git init
+git add hello.html
+git commit -m "First Commit"
+
+4. Checking the status of the repository
+git status
+
+5. Making changes
+#saved into hello.html "<h1>Hello, World!</h1>"
+git status
+
+6. Staging the changes
+git add hello.html
+git status
+
+7. Staging and commiting
+#Just information
+
+8. Commiting the changes
+git commit #added "Added hi tag"
+git status
+
+9. Changes, not files
+#changed hello.html
+git add hello.html
+#one more time changed hello.html
+git status
+git commit -m "Added standard HTML page tags"
+git status
+git add . # '.' means current directory
+git status
+git commit -m "Added HTML header" #after this everything fine, nothing to commit
+
+10. History
+git log --pretty=oneline
+	--pretty=oneline --max-count=2
+	--pretty=oneline --since='5 minutes ago'
+	--pretty=oneline --until='5 minutes ago'
+	--pretty=oneline --author=<your name>
+	--pretty=oneline --all
+#different versions of getting all history
+git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+
+11. Aliases
+# to make aliases lets run following commands
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.br branch
+git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+git config --global alias.type 'cat-file -t'
+git config --global alias.dump 'cat-file -p'
+#also let's not forget to edit our .gitconfig file in order to our aliases started to work
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+#aliases are really helpfull instead of typing "git history" you just type "git hist".
+	alias gs='git status ' #optional you can add to the .PROFILE
+	alias ga='git add '
+	alias gb='git branch '
+	alias gc='git commit'
+	alias gd='git diff'
+	alias go='git checkout '
+	alias gk='gitk --all&'
+	alias gx='gitx --all'
+
+	alias got='git '
+	alias get='git '
+
+12. Getting older versions
+git hist
+git checkout <hash> #after this your will in DETACHED mode :)
+cat hello.html #you will see previous version of the hello.html
+git checkout master #after this command you will be in master
+cat hello.html #now you see last version of the hello.html
+
+13.Tagging versions
+git tag v1 #tag useful alternative of the hashes, hashes of the logs
+git checkout v1^ #you now in 'detached HEAD' state.
+cat hello.html #also will old version of the hello.html
+git tag v1-beta 
+git checkout v1
+git checkout v1-beta
+git tag #to see all tags
+git hist master --all #you can also check for tags in the log.
+
+14. Discarding (cancelling) local changes (before staging)
+git checkout master
+#changed hello.html
+git status #we will see that hello.html was changed
+#so discard (cancell) the changes we can run following commands
+git checkout hello.html #to undo our changes
+git status
+cat hello.html #everything was canceled
+
+15. Cancel STAGED changes (before committing)
+#lets make changes to the hello.html and then STAGE the modified file
+git add hello.html #STAGED the file
+#and as written in hint type following command
+git reset HEAD hello.html 
+#finally check our file
+git checkout hello.html
+git status
+
+16. Cancelling COMMITS
+#lets make changes to the hello.html and then STAGE the modified file and commit changes
+git add hello.html
+git commit -m "Oops, we didn't want this commit"
+#To cancel the commit, we need to create a commit that deletes the changes saved by unwanted commit.
+git revert HEAD #so, in editor you can edit the default commit message OR ...
+    OR
+git revert HEAD --no-edit # ... OR leave it as is. Save and close the file.
+git hist
+
+17. REMOVING A COMMIT from a branch
+#goal to learn how to delete the branch's latest commits
+git hist
+git tag oops
+git reset --hard v1 #as we see last normal commit with tag: v1 we used reset command until "v1" commit
+git hist --all #but our "oops" tagged commit is still alive and not deleted as we can see
+
+
+18. REMOVING the "oops" TAG
+#to delete unwanted tag lets use following commands
+git tag -d oops
+git hist --all
+
+19. Changing commits
+#how to modify an already existing commit, but first of all let's modify hello.html and stage and commit it
+git add hello.html
+git commit -m "Add an author comment"
+#one more time let's change hello.html and then stage
+git add hello.html
+git commit --amend -m "Add an author/email comment" #--amend synonym of change
+#and like that we changed previous commit
+
+20. Moving files
+mkdir lib
+git mv hello.html lib #ATTENTION use "GIT MV file folder" NOT JUST "MV flie folder"
+git status
+git commit -m "Moved hello.html to lib"
+
+21. More information about the structure
+#just add new file index.html
+touch index.html
+notepad index.html #edited index.html
+git add index.html
+git commit -m "Added index.html."
+
+22. Inside Git: .Git directory
+#in this tutorial we will just look at git structure
+ls -C .git
+ls -C .git/objects
+ls -C .git/objects/60
+cat .git/config
+ls .git/refs
+ls .git/refs/heads
+ls .git/refs/tags
+cat .git/refs/tags/v1
+cat .git/HEAD #there is a reference to the current branch in the HEAD file. At the moment it must be the master branch
+
+23. Git inside: Direct work with git objects
+git cat-file -t <hash> #type
+git cat-file -p <hash> #dump
+git cat-file -p <treehash> #see dump of the tree, the files in the tree
+git cat-file -p <libhash>
+git cat-file -p <hellohash>
+
+24. Creating a Branch
+git checkout -b style #we created style branch, -b key is responsible for creation, if we will just use git checkout master we will just in move our HEAD to master branch
+git status #we will see that we on the "style" branch
+touch lib/style.css #and edit it in notepad
+notepad lib/style.css
+git add lib/style.css
+git commit -m "Added css stylesheet"
+notepad hello.html #update hello.html
+git add lib/hello.html
+git commit -m "Hello uses style.css"
+notepad index.html #let's one more time update index.html
+git add index.html
+git commit -m "Updated index.html"
+
+25. Navigating Branches
+git hist --all
+git checkout master #change our current branch "style" to "master" branch
+cat lib/hello.html #and as we can see our file haven't changed 
+git checkout style
+cat lib/hello.html #only in style branch we see changes because we staged and commited them only on this branch
+
+26. Changes to master branch
+touch README #added new file README add some text there
+git checkout master #moved to the master branch
+git add README #staged README
+git commit -m "Added README" 
+
+27. View the different branches
+git hist --all
+$ git hist --all
+* 7b10d8d 2016-12-27 | Added README (HEAD -> master) [Gaynetdin]
+| * 073231e 2016-12-27 | Updated index.html (style) [Gaynetdin]
+| * b6291d0 2016-12-27 | Hello uses style.css [Gaynetdin]
+| * 827461d 2016-12-27 | Added css stylesheet [Gaynetdin]
+|/
+* 902b961 2016-12-27 | Added index.html [Gaynetdin]
+* 30ec1b6 2016-12-27 | Moved hello.html to lib [Gaynetdin]
+* a58fc16 2016-12-27 | Add an author/email comment [Gaynetdin]
+* 607e588 2016-12-27 | Added HTML header (tag: v1) [Gaynetdin]
+* 9bf91af 2016-12-27 | Added standard HTML page tags (tag: v1-beta) [Gaynetdin]
+* f1668a0 2016-12-27 | Added hi tag [Gaynetdin]
+* 8bd3d9f 2016-12-27 | First Commit [Gaynetdin]
+
+28. Merging
+git checkout style
+git merge master #also here you can but don't need to edit text 
+git hist --all
+*   1d16698 2016-12-27 | Merge branch 'master' into style (HEAD -> style) [Gaynetdin]
+|\
+| * 7b10d8d 2016-12-27 | Added README (master) [Gaynetdin]
+* | 073231e 2016-12-27 | Updated index.html [Gaynetdin]
+* | b6291d0 2016-12-27 | Hello uses style.css [Gaynetdin]
+* | 827461d 2016-12-27 | Added css stylesheet [Gaynetdin]
+|/
+* 902b961 2016-12-27 | Added index.html [Gaynetdin]
+* 30ec1b6 2016-12-27 | Moved hello.html to lib [Gaynetdin]
+* a58fc16 2016-12-27 | Add an author/email comment [Gaynetdin]
+* 607e588 2016-12-27 | Added HTML header (tag: v1) [Gaynetdin]
+* 9bf91af 2016-12-27 | Added standard HTML page tags (tag: v1-beta) [Gaynetdin]
+* f1668a0 2016-12-27 | Added hi tag [Gaynetdin]
+* 8bd3d9f 2016-12-27 | First Commit [Gaynetdin]
+
+29. Creating a conflict
+git checkout master
+notepad lib/hello.html
+# make sure you've used single-quotes to avoid problems with bash and ! character)
+git add lib/hello.html
+git commit -m 'Life is great!'
+* 61444cf 2016-12-27 | Life is great! (HEAD -> master) [Gaynetdin]
+| *   1d16698 2016-12-27 | Merge branch 'master' into style (style) [Gaynetdin]
+| |\
+| |/
+|/|
+* | 7b10d8d 2016-12-27 | Added README [Gaynetdin]
+| * 073231e 2016-12-27 | Updated index.html [Gaynetdin]
+| * b6291d0 2016-12-27 | Hello uses style.css [Gaynetdin]
+| * 827461d 2016-12-27 | Added css stylesheet [Gaynetdin]
+|/
+* 902b961 2016-12-27 | Added index.html [Gaynetdin]
+* 30ec1b6 2016-12-27 | Moved hello.html to lib [Gaynetdin]
+* a58fc16 2016-12-27 | Add an author/email comment [Gaynetdin]
+* 607e588 2016-12-27 | Added HTML header (tag: v1) [Gaynetdin]
+* 9bf91af 2016-12-27 | Added standard HTML page tags (tag: v1-beta) [Gaynetdin]
+* f1668a0 2016-12-27 | Added hi tag [Gaynetdin]
+* 8bd3d9f 2016-12-27 | First Commit [Gaynetdin]
+
+30. Resolving Conflicts
+git checkout style
+git merge master
+#Auto-merging lib/hello.html
+#CONFLICT (content): Merge conflict in lib/hello.html
+#Automatic merge failed; fix conflicts and then commit the result.
+#we need solve conflicts manually so let's change lib/hello.html
+notepad lib/hello.html
+git add lib/hello.html
+git commit -m "Merged master fixed conflict."
+#[style 1dcc24e] Merged master fixed conflict.
+
+31. Relocating as an alternative to merging
+#Let us look at the differences between relocating and merging. To do 
+#this, we need to get back into the repository at the time prior to the first merge, and then repeat 
+#the same steps but using relocating instead of merging.
+
+32. Resetting the style branch
+#reset command we use see to move current branch, in our case "style" branch to the point before merging
+git checkout style
+git hist
+*   1dcc24e 2016-12-27 | Merged master fixed conflict. (HEAD -> style) [Gaynetdin]
+|\
+| * 61444cf 2016-12-27 | Life is great! (master) [Gaynetdin]
+* |   1d16698 2016-12-27 | Merge branch 'master' into style [Gaynetdin]
+|\ \
+| |/
+| * 7b10d8d 2016-12-27 | Added README [Gaynetdin]
+* | 073231e 2016-12-27 | Updated index.html [Gaynetdin]
+* | b6291d0 2016-12-27 | Hello uses style.css [Gaynetdin]
+* | 827461d 2016-12-27 | Added css stylesheet [Gaynetdin]
+|/
+* 902b961 2016-12-27 | Added index.html [Gaynetdin]
+* 30ec1b6 2016-12-27 | Moved hello.html to lib [Gaynetdin]
+* a58fc16 2016-12-27 | Add an author/email comment [Gaynetdin]
+* 607e588 2016-12-27 | Added HTML header (tag: v1) [Gaynetdin]
+* 9bf91af 2016-12-27 | Added standard HTML page tags (tag: v1-beta) [Gaynetdin]
+* f1668a0 2016-12-27 | Added hi tag [Gaynetdin]
+* 8bd3d9f 2016-12-27 | First Commit [Gaynetdin]
+git reset --hard 073231e
+#HEAD is now at 073231e Updated index.html
+git hist --all
+* 61444cf 2016-12-27 | Life is great! (master) [Gaynetdin]
+* 7b10d8d 2016-12-27 | Added README [Gaynetdin]
+| * 073231e 2016-12-27 | Updated index.html (HEAD -> style) [Gaynetdin]
+| * b6291d0 2016-12-27 | Hello uses style.css [Gaynetdin]
+| * 827461d 2016-12-27 | Added css stylesheet [Gaynetdin]
+|/
+* 902b961 2016-12-27 | Added index.html [Gaynetdin]
+* 30ec1b6 2016-12-27 | Moved hello.html to lib [Gaynetdin]
+* a58fc16 2016-12-27 | Add an author/email comment [Gaynetdin]
+* 607e588 2016-12-27 | Added HTML header (tag: v1) [Gaynetdin]
+* 9bf91af 2016-12-27 | Added standard HTML page tags (tag: v1-beta) [Gaynetdin]
+* f1668a0 2016-12-27 | Added hi tag [Gaynetdin]
+* 8bd3d9f 2016-12-27 | First Commit [Gaynetdin]
+
+33. RESET of the Master branch
+# Reset the "master" branch to the point prior to the conflicting commit
+git checkout master
+git hist
+* 61444cf 2016-12-27 | Life is great! (HEAD -> master) [Gaynetdin]
+* 7b10d8d 2016-12-27 | Added README [Gaynetdin]
+* 902b961 2016-12-27 | Added index.html [Gaynetdin]
+* 30ec1b6 2016-12-27 | Moved hello.html to lib [Gaynetdin]
+* a58fc16 2016-12-27 | Add an author/email comment [Gaynetdin]
+* 607e588 2016-12-27 | Added HTML header (tag: v1) [Gaynetdin]
+* 9bf91af 2016-12-27 | Added standard HTML page tags (tag: v1-beta) [Gaynetdin]
+* f1668a0 2016-12-27 | Added hi tag [Gaynetdin]
+* 8bd3d9f 2016-12-27 | First Commit [Gaynetdin]
+git reset --hard 7b10d8d
+git hist --all
+* 7b10d8d 2016-12-27 | Added README (HEAD -> master) [Gaynetdin]
+| * 073231e 2016-12-27 | Updated index.html (style) [Gaynetdin]
+| * b6291d0 2016-12-27 | Hello uses style.css [Gaynetdin]
+| * 827461d 2016-12-27 | Added css stylesheet [Gaynetdin]
+|/
+* 902b961 2016-12-27 | Added index.html [Gaynetdin]
+* 30ec1b6 2016-12-27 | Moved hello.html to lib [Gaynetdin]
+* a58fc16 2016-12-27 | Add an author/email comment [Gaynetdin]
+* 607e588 2016-12-27 | Added HTML header (tag: v1) [Gaynetdin]
+* 9bf91af 2016-12-27 | Added standard HTML page tags (tag: v1-beta) [Gaynetdin]
+* f1668a0 2016-12-27 | Added hi tag [Gaynetdin]
+* 8bd3d9f 2016-12-27 | First Commit [Gaynetdin]
+
+34. Rebase
+git checkout style
+$ git rebase master
+#First, rewinding head to replay your work on top of it...
+#Applying: Added css stylesheet
+#Applying: Hello uses style.css
+#Applying: Updated index.html
+git hist
+* 5c2e7ee 2016-12-27 | Updated index.html (HEAD -> style) [Gaynetdin]
+* bc502c0 2016-12-27 | Hello uses style.css [Gaynetdin]
+* 23efbaa 2016-12-27 | Added css stylesheet [Gaynetdin]
+* 7b10d8d 2016-12-27 | Added README (master) [Gaynetdin]
+* 902b961 2016-12-27 | Added index.html [Gaynetdin]
+* 30ec1b6 2016-12-27 | Moved hello.html to lib [Gaynetdin]
+* a58fc16 2016-12-27 | Add an author/email comment [Gaynetdin]
+* 607e588 2016-12-27 | Added HTML header (tag: v1) [Gaynetdin]
+* 9bf91af 2016-12-27 | Added standard HTML page tags (tag: v1-beta) [Gaynetdin]
+* f1668a0 2016-12-27 | Added hi tag [Gaynetdin]
+* 8bd3d9f 2016-12-27 | First Commit [Gaynetdin]
+#as we can see now contains all its changes, plus all the changes of the master branch
+#This makes the chain of commits linear and more readable
+#DON'T USE REBASE COMMAND IF:
+				If the branch is public and shared
+				When the exact commit branch history is important
+
+35. Merging to the Master branch
+git checkout master
+git hist --all
+git merge style
+#Updating 7b10d8d..5c2e7ee
+#Fast-forward
+# index.html     | 3 +++
+# lib/hello.html | 1 +
+# lib/style.css  | 3 +++
+# 3 files changed, 7 insertions(+)
+# create mode 100644 lib/style.css
+$ git hist
+* 5c2e7ee 2016-12-27 | Updated index.html (HEAD -> master, style) [Gaynetdin]
+* bc502c0 2016-12-27 | Hello uses style.css [Gaynetdin]
+* 23efbaa 2016-12-27 | Added css stylesheet [Gaynetdin]
+* 7b10d8d 2016-12-27 | Added README [Gaynetdin]
+* 902b961 2016-12-27 | Added index.html [Gaynetdin]
+* 30ec1b6 2016-12-27 | Moved hello.html to lib [Gaynetdin]
+* a58fc16 2016-12-27 | Add an author/email comment [Gaynetdin]
+* 607e588 2016-12-27 | Added HTML header (tag: v1) [Gaynetdin]
+* 9bf91af 2016-12-27 | Added standard HTML page tags (tag: v1-beta) [Gaynetdin]
+* f1668a0 2016-12-27 | Added hi tag [Gaynetdin]
+* 8bd3d9f 2016-12-27 | First Commit [Gaynetdin]
+
+36. Multiple repositories
+#Notice at which repository currently you are
+
+37. Cloning repositories
+cd ..
+pwd #/c/Users/Administrator/GitHowTo
+ls # hello/
+git clone hello cloned_hello
+#Cloning into 'cloned_hello'...
+#done.
+ls # hello/ cloned_hello/
+
+38. Examine the cloned repository
+cd cloned_hello
+ls
+#README  index.html  lib/
+git hist --all
+* 5c2e7ee 2016-12-27 | Updated index.html (HEAD -> master, origin/style, origin/master, origin/HEAD) [Gaynetdin]
+* bc502c0 2016-12-27 | Hello uses style.css [Gaynetdin]
+* 23efbaa 2016-12-27 | Added css stylesheet [Gaynetdin]
+* 7b10d8d 2016-12-27 | Added README [Gaynetdin]
+* 902b961 2016-12-27 | Added index.html [Gaynetdin]
+* 30ec1b6 2016-12-27 | Moved hello.html to lib [Gaynetdin]
+* a58fc16 2016-12-27 | Add an author/email comment [Gaynetdin]
+* 607e588 2016-12-27 | Added HTML header (tag: v1) [Gaynetdin]
+* 9bf91af 2016-12-27 | Added standard HTML page tags (tag: v1-beta) [Gaynetdin]
+* f1668a0 2016-12-27 | Added hi tag [Gaynetdin]
+* 8bd3d9f 2016-12-27 | First Commit [Gaynetdin]
+#notice that cloned repo consist of different branches: origin/master, origin/style and origin/HEAD
+
+39. What is origin?
+git remote
+git remote show origin
+* remote origin
+  Fetch URL: C:/Users/Administrator/GitHowTo/hello
+  Push  URL: C:/Users/Administrator/GitHowTo/hello
+  HEAD branch: master
+  Remote branches:
+    master tracked
+    style  tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+#We can see that the “origin” of the remote repository is the original hello repo
+
+40. Remote branches
+git branch
+#* master
+git branch -a
+#* master
+#  remotes/origin/HEAD -> origin/master
+#  remotes/origin/master
+#  remotes/origin/style
+#Git lists all the commits from the original repo, but the remote repository branches 
+#are not treated as local ones. If we need our own style branch, we need to create on our own. 
+#In a minute you will see how it is done.
+
+41. Changing the original repository
+cd ../hello
+# (You should be in the original hello repository now)
+notepad README
+# changed the README file
+git add README
+git commit -m "Changed README in original repo"
+
+42. Fetching changes
+# will learn how to pull changes from a remote repository
+cd ../cloned_hello
+#NOTE: We are now in the repository cloned_hello
+git fetch
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From C:/Users/Administrator/GitHowTo/hello
+   5c2e7ee..797278e  master     -> origin/master
+git hist --all
+* 797278e 2016-12-27 | Changed README in original repo (origin/master, origin/HEAD) [Gaynetdin]
+* 5c2e7ee 2016-12-27 | Updated index.html (HEAD -> master, origin/style) [Gaynetdin]
+* bc502c0 2016-12-27 | Hello uses style.css [Gaynetdin]
+* 23efbaa 2016-12-27 | Added css stylesheet [Gaynetdin]
+* 7b10d8d 2016-12-27 | Added README [Gaynetdin]
+* 902b961 2016-12-27 | Added index.html [Gaynetdin]
+* 30ec1b6 2016-12-27 | Moved hello.html to lib [Gaynetdin]
+* a58fc16 2016-12-27 | Add an author/email comment [Gaynetdin]
+* 607e588 2016-12-27 | Added HTML header (tag: v1) [Gaynetdin]
+* 9bf91af 2016-12-27 | Added standard HTML page tags (tag: v1-beta) [Gaynetdin]
+* f1668a0 2016-12-27 | Added hi tag [Gaynetdin]
+* 8bd3d9f 2016-12-27 | First Commit [Gaynetdin]
+cat README
+#This is the Hello World example from the git tutorial.
+
+43. Merging pulled changes
+#we will learn to get the fetched changes into the current branch and working directory.
+git status
+#On branch master
+#Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+#  (use "git pull" to update your local branch) nothing to commit, working tree clean
+git merge origin/master
+#Updating 5c2e7ee..797278e
+#Fast-forward
+# README | 3 ++-
+# 1 file changed, 2 insertions(+), 1 deletion(-)
+cat README
+#This is the Hello World example from the git tutorial.
+#(changed in original)
+#And finally as we can see we fetched (recieved) updated info from origin/master in master of cloned_hello repo
+  
+44. Pulling and merging changes
+#note that "git pull" command is identical to "git fetch" plus "git merge"
+# git pull = git fetch + git merge origin/master
+
+45. Adding a tracking branch
+# goal is to learn how to add a local branch that tracks a remote branch.
+git branch --track style origin/style
+#Branch style set up to track remote branch style from origin
+git branch -a
+#* master
+#  style
+#  remotes/origin/HEAD -> origin/master
+#  remotes/origin/master
+#  remotes/origin/style
+git hist --max-count=2
+#* 797278e 2016-12-27 | Changed README in original repo (HEAD -> master, origin/master, origin/HEAD) [Gaynetdin]
+#* 5c2e7ee 2016-12-27 | Updated index.html (origin/style, style) [Gaynetdin]
+
+46. Bare repos
+cd ..
+git clone --bare hello hello.git
+#Cloning into bare repository 'hello.git'...
+#done.
+ls hello.git
+#HEAD  config  description  hooks/  info/  objects/  packed-refs  refs/
+#NOTE: We are now in the working directory, typically repos ending in '.git' are bare.
+# Actually it is nothing but the .git directory of a non-bare repository.
+
+47. Adding a remote repository
+#To add a bare repo as a remote to our original repo.
+cd hello
+git remote add shared ../hello.git
+#NOTE: We are now in the hello repo.
+
+48. Submitting changes
+# goal is to learn how to submit changes to the remote repository.
+notepad README
+git checkout master
+git add README
+git commit -m "Added shared comment to readme"
+#[master b303d50] Added shared comment to readme
+#1 file changed, 1 insertion(+), 1 deletion(-)
+git push shared master #Now send changes to the shared repository.
+#Counting objects: 3, done.
+#Delta compression using up to 2 threads.
+#Compressing objects: 100% (3/3), done.
+#Writing objects: 100% (3/3), 401 bytes | 0 bytes/s, done.
+#Total 3 (delta 0), reused 0 (delta 0)
+#To ../hello.git
+#   797278e..b303d50  master -> master
+
+49. Removing common changes
+cd ../cloned_hello
+#Note: We are now in the cloned_hello repository.
+git remote add shared ../hello.git
+git branch --track shared master 
+#Branch shared set up to track local branch master.
+git pull
+#remote: Counting objects: 3, done.
+#remote: Compressing objects: 100% (3/3), done.
+#remote: Total 3 (delta 0), reused 0 (delta 0)
+#Unpacking objects: 100% (3/3), done.
+#From C:/Users/Administrator/GitHowTo/hello
+#   797278e..b303d50  master     -> origin/master
+#Updating 797278e..b303d50
+#Fast-forward
+# README | 2 +-
+# 1 file changed, 1 insertion(+), 1 deletion(-)
+cat README
+
+50. Placing your git repository
+# (From the work directory)
+git daemon --verbose --export-all --base-path
+# (From the work directory)
+git clone git://localhost/hello.git network_hello
+cd network_hello
+ls
+
+51. Sharing repositories
+# goal is to learn to share repositories via WIFI.
