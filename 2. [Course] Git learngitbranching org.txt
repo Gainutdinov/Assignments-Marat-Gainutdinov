@@ -139,12 +139,66 @@ git branch -f three C2
 
 		Remote
 -----Push & Pull -- Git Remotes!-----
+1: Clone Intro
+git clone
+
+2: Remote Branches
+#<remote name>/<branch name>
+#Lets check out a remote branch and see what happens
+#git checkout o/master; git commit
+#As you can see, git put us into detached HEAD mode and then did not update o/master when #we added a new commit. This is because o/master will only update when the remote updates.
+git commit
+git checkout o/master #and now we in detached HEAD mode
+git commit #still in detached HEAD mode
+
+3: Git Fetchin' (recieve)
+#git getch http:// command download the commits that the remote has but are missing from
+#our local repo, and...
+#updates where our remote branches point (for instance, origin/master)
+#BUT fetch doesn't change anything about your local state, it won't update yoru master
+#or change anything about how your file system looks right now
+git fetch
+
+4: Git Pullin'
+#git pull = git fetch + git merge
+git pull
+
+5: Faking Teamwork
+#git fakeTeamwork command will add in remote repo new commit
+#git fakeTeamwork foo 3 will add 3 new commits to the foo branch
+git clone
+git fakeTeamwork master 2 #fake command!
+git commit
+git pull
+
+6: Git Pushin'
+#push (aka publish), we push our commits to the remote repo
+git commit
+git commit
+git push
+
+7: Diverged History
+#git fetch; git rebase o/master; git push 
+#git fetch; git merge o/master; git push same thing will happend like in the prevoius #commands
+#git pull --rebase; git push  result of the command will be the same
+#git pull; git push  the same result
+git clone
+git fakeTeamwork #fake command!
+git commit
+git fetch
+git rebase o/master
+git push 
 
 
+-----To Origin And Beyond -- Advanced Git Remotes!----- 
+1: Push Master!
+#in this workflow we combine two things:
+#integrating feature branch work onto master, and
+#pushing and pulling from the remote
+#we use commands: git pull --rebase; git push
+git fetch
 
-
-
-
+#
 
 
 
