@@ -1,0 +1,29 @@
+First of all we should initialize our repo, so 
+> git init
+after that we should add files to repo, via typing
+> git add <filename>
+after that we should add commit
+> git commit
+commit creates a Head & in Master branch, before the commit command the file will be without the file
+to show 
+>git status
+Let's create a branch and call branch feature
+> git branch feature
+and furthermore we will work in feature branch
+after the commit command
+> touch bar.txt
+> git commit
+now we will on the next commit (point) with head and then use feature branch 
+in a same time our master branch will be stay on previous commit (point)
+now let's look at ID = content + author + date + log + previous commit, 
+also important  all commit, id's are unique and  commits never change
+> git merge feature
+after above command git will merge Master branch and feature branch, after that it will 
+move Master label to current commit (point)
+
+
+
+
+
+
+

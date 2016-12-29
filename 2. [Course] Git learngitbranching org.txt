@@ -196,14 +196,113 @@ git push
 #integrating feature branch work onto master, and
 #pushing and pulling from the remote
 #we use commands: git pull --rebase; git push
+git branch -f master C2
+git pull --rebase
+git push
+git branch -f master C4
+git pull --rebase
+git push
+git branch -f master C7
+git pull --rebase
+git push
+    or
+reset --forSolution
 git fetch
+git rebase o/master side1
+git rebase side1 side2
+git rebase side2 side3
+git rebase side3 master
+git push
 
-#
+2: Merging with remotes
+#Pros: Rebasing makes your commit tree look very clean since everything is in a straight #line
+#Cons: Rebasing modifies the (apparent) history of the commit tree
+git fetch
+git branch -f master C8
+git checkout master
+git merge side1
+git merge side2
+git merge side3
+git push
+    or
+git checkout master
+git pull
+git merge side1
+git merge side2
+git merge side3
+git push
 
+3: Remote Tracking
+#git checkout -b foo o/master; git pull
+#As you can see, we used the implied merge target of o/master to update the foo branch,
+#note how master doesn't get updated
+#we just pull the remote master branch to the foo branch
+#git checkout -b foo o/master; git commit; git push command will push
+# info into the o/master branch (remote)
+#another way to set remote tracking on a branch is to simply use the git branch -u option
+#run git branch -u o/master foo
+#will set the foo branch to track o/master. if foo is currently checked our you can
+#even leave it off: git branch -u o/master
+#git branch -u o/master foo; git commit; git push
 
+git branch side
+git checkout side
+git commit
+git branch -f side C1
+git branch -u o/master side
+git pull
+git cherry-pick C3
+git push
+    or
+git checkout -b side o/master
+git commit
+git pull --rebase
 
+4: Git push arguments
+#git checkout C0; git push origin master
+git push origin foo
+git psuh origin master
 
+5: Git push arguments -- Expanded!
+#git push origin <source>:<destination>
+#remember <source> is any location that git understand
+#for ex:git push origin foo^:master
+#even we can push to the new remote brance
+# via this command git push origin master:newBranch
+git push origin foo:master
+git push origin master^:foo
 
+6: Fetch arguments
+#git fetch origin foo to fetch commits from foo branch
+#fetch only download the commits
+#so the fetch and push are quite similar, just in opposite directions
+#git fetch origin foo~1:bar hence foo~1 is <source> to the bar
+#also command in parallel creates bar branch if it doesn't exist
+#if there are no arguments it jus downloads all the commits from remote branches
+git fetch origin master:foo
+git fetch origin foo:master
+git checkout foo
+git merge master
+
+7: Source of nothing
+#what does git push origin :foo it DELETES REMOTE AND LOCAL BRNACH CALLED FOO
+#but it only in case if foo branch exist in remote and local repo
+#git fetch origin :bar create in new branch in local repo
+git push origin :foo
+git fetch origin :bar
+
+8: Pull arguments
+#command git pull origin foo = git fetch origin foo; git merge o/foo
+#command git pull origin bar~1:bugFix = git fetch origin bar~1:bugFix; git merge bugFix
+#git pull origin master we download commit onto o/master just as normal. Then we merged #o/master to where we are, regardless of what was currently checked out
+#git pull origin master:foo works like master <source> foo <destination>, command create #new branch foo and when just merge foo with bar, but foo branch stand in a same place
+git fetch origin master:side
+git fetch origin bar:foo
+git merge foo
+git merge side
+    or
+git pull origin bar:foo
+git pull origin master:side
 
 
 
