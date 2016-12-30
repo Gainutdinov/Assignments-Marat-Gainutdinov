@@ -1,0 +1,21 @@
+http://www.infoq.com/presentations/php-history?
+"worse is better"
+PHP is used in Facebook, Wordpress, Drupal, Mediawiki
+bad suprises, against PHP:
+		$x / 0 // => bool(false)
+		"11abcd" + "1xy" // => int(12)
+		"0123" + "3456" // => int(3579)
+		"0123" | "3456" // => string("3577")
+
+	inconsisten, dangerous standard library
+		array_map vs. array_reduce argument orders
+		array_merge
+		mysql_escape_string vs (sigh) mysql_real_escape_string
+In Defense of PHP:
+	PHP gets three important things really right
+		programmer workflow (save reload-the-page, short feedback cycle, optimizes most precious resource of all: programmer short-term memory)
+		state (All PHP code on a server is the request)
+		concurrency (PHP request execute in a single thread, limits PHP's applicable domain)
+HipHop for PHP - transpiler source-to-source compiler, PHP code is translated into C++ code, was created by Facebook.
+HHVM is an open-source virtual machine designed for executing programs written in Hack (programming language for HHVM) and PHP.
+So, HHVM created to increase compiling source PHP code into machine code faster (swifter).

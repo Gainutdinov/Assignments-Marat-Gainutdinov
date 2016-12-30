@@ -1,0 +1,15 @@
+https://footyntech.wordpress.com/2013/08/23/what-docker-is/
+Docker for Dummies
+	Docker is an open-source project to easily create lightweight, portable, self-sufficient containers 
+from any application. The same container that a developer builds and tests on a laptop 
+can run at scale, in production, on VMs, bare metal, OpenStack clusters, public clouds and more.
+	LXC (LinuX Containers) is an operating system-level virtualization method for running multiple 
+isolated Linux systems (containers) on a single control host.
+	Interesting Containers share the OS. They just have isolated process spaces. And the best thing
+about containers is the fact that they use a layered file system called AuFS 
+(short for advanced multi-layered unification filesystem)
+Main features of docker:
+	Throwable Sandboxes
+	Elegant Application Delivery
+	Create uniform development and production Environments
+	

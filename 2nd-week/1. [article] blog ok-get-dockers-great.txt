@@ -1,0 +1,17 @@
+http://blogs.gartner.com/richard-watson/ok-get-dockers-great/
+
+Use Case 1: Docker for Local Application Development and Test
+	Works on my machine → Works again on my machine tomorrow → Works on a test machine
+
+Use Case 2: Docker for Development Team Collaboration
+	Works on my machine → Works on your machine
+
+Use Case 3: Docker for Continuous Integration
+	You won't need time to spend for build up your custom dev. environment into clients machines
+
+Use Case 4: Docker for Production Application Deployment
+	Works on my machine → Works on QA machines → Works (the same) on... 
+	...production hardware → Stays working (securely) on the production environment
+
+Use Case 5: Docker for Creating a Private PaaS (Platform as a Service)
+	
