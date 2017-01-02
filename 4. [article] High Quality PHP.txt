@@ -1,0 +1,12 @@
+https://web.archive.org/web/20140111060719/http://www.acquia.com/blog/high-quality-php-benjamin-eberlei
+
+Tools to Help Improve Software Quality
+	Automated Testing (PHPUnit - tool to write automated tests, Behat like a PHPUnit allows you to write test but
+	in a human readable lang. called Gherkin and parses it into executable test-cases. Behad is Behavior Driven Development
+	 ("BDD") and it's very easy to write test on it to browsers)
+	Keep it SOLID
+	Static code analysis tools, they don't execute code; they are used to find code that can be optimized in a number of ways.
+	Check for common, consistent coding style - PHP CodeSniffer
+	Check for programming errors and messy behavior - PHP Mess Detector (PHPMD)
+	Check for copy pasted code - PHP Copy-Paste Detector
+	Compute complexity metrics for code - PHP Depend

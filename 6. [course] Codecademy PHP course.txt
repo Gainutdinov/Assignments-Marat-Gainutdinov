@@ -1,0 +1,683 @@
+https://www.codecademy.com/learn/php
+
+###Course Outcomes By end the end of this course, you'll have gained familiarity with a very convenient, flexible server-side 
+language: PHP. You'll be exposed to many fundamental programming concepts such as data types, functions, control flow, and more.
+
+###Why learn PHP? PHP is one of the simplest server-side languages out there, and it was designed primarily for web development. 
+Learning PHP is good not only because it adds one more language to your toolbelt, but also because there is a large number of sites 
+currently built with Wordpress, a content management system (CMS) built with PHP.
+
+-----Introduction to PHP-----
+
+1. PHP in Action
+ -> just click Save & Submit Code
+
+2. Why Learn PHP?
+ -> <!DOCTYPE html>
+	<html>
+		<head>
+		</head>
+		<body>
+			<p>
+			  <?php
+				echo "My first line of PHP!"; 
+			  ?>
+			</p>
+		</body>
+	</html>
+	
+3. PHP and HTML
+ -> <!DOCTYPE html>
+	<html>
+		<head>
+		</head>
+		<body>
+			<p>
+			  <?php
+				echo "Marat";
+			  ?>
+			</p>   
+		</body>
+	</html>
+	
+4. PHP Files
+ -> Click Save & Submit Code
+
+5. Echo
+ -> <!DOCTYPE html>
+	<html>
+		<head>
+		</head>
+		<body>
+			<h1>
+			  <?php
+				   echo "I'm learning PHP"; 
+			  ?>
+			</h1>
+		</body>
+	</html> 
+	
+6. Strings
+ -> <!DOCTYPE html>
+	<html>
+		<head>
+		</head>
+		<body>
+			<p>
+			  <?php
+				echo "I'm" . " " . "using concatenations" . "!";
+			  ?>
+			</p>
+		</body>
+	</html>
+
+7. Arithmetic
+ -> <!DOCTYPE html>
+	<html>
+		<head>
+		</head>
+		<body>
+			<p>
+			  <?php
+				   echo 17 * 123; 
+			  ?>
+			</p>
+		</body>
+	</html>
+
+8. Variables (all variable names in PHP start with sign ($) )
+ -> <!DOCTYPE html>
+	<html>
+		<head>
+		</head>
+		<body>
+			<p>
+			  <?php
+				$myName = "Marat";
+			  ?>
+			</p>
+		</body>
+	</html>
+	
+9. Semicolons
+ -> <!DOCTYPE html>
+	<html>
+		<head>
+			<title>Oh No!</title>
+		</head>
+		<body>
+			<p><?php
+				echo "Oh, the humanity!";
+			  ?></p>
+		</body>
+	</html>
+
+10. Comments
+ -> <!DOCTYPE html>
+	<html>
+		<head>
+			<title>Oh No!</title>
+		</head>
+		<body>
+			<p><?php
+				echo "Oh, the humanity!";
+				// I don't want to comment here
+			  ?></p>
+		</body>
+	</html>
+
+11. Creating a Variable
+ -> <!DOCTYPE html>
+	<html>
+		<head>
+			<link type='text/css' rel='stylesheet' href='style.css'/>
+			<title>PHP FTW!</title>
+		</head>
+		<body>
+			<!-- Write your PHP code below!-->
+			
+			<p>
+				$myName = "Marat";
+			</p>   
+		</body>
+	</html>
+
+12. Let the Machine Do  the Math
+ -> <!DOCTYPE html>
+	<html>
+		<head>
+			<link type='text/css' rel='stylesheet' href='style.css'/>
+			<title>PHP FTW!</title>
+		</head>
+		<body>
+			<!-- Write your PHP code below!-->
+			
+			<p>
+				$myName = "Marat";
+				$myAge = 23;
+			</p>   
+		</body>
+	</html>
+
+13. Echo It!
+ -> <!DOCTYPE html>
+	<html>
+		<head>
+			<link type='text/css' rel='stylesheet' href='style.css'/>
+			<title>PHP FTW!</title>
+		</head>
+		<body>
+			<!-- Write your PHP code below!-->
+					
+			<p>
+				$myName = "Marat";
+				$myAge = 23;
+				echo $myName;
+				echo $myAge; 
+				
+			</p>   
+		</body>
+	</html>
+
+
+-----Conditionals and Control Flow-----
+
+1. Comparisons
+ -> <html>
+	  <head>
+		<title>Comparing Numbers</title>
+	  </head>
+	  <body>
+		<p>
+		  <?php
+			5>3;
+		  ?>
+		</p>
+	  </body>
+	</html>
+
+2. If statements
+ -> <html>
+	  <head>
+	  </head>
+	  <body>
+		<p>
+		  <?php
+			$items =  6;   // Set this to a number greater than 5!
+			
+			if($items > 5) {
+			  echo "You get a 10% discount!";
+			}
+		  ?>
+		</p>
+	  </body>
+	</html>
+ 
+3. Adding an Else
+ -> <html>
+	  <head>
+	  </head>
+	  <body>
+		<p>
+		  <?php
+			$items = 3;
+			
+			if($items > 5) {
+			  echo "You get a 10% discount!";
+			}
+			else {
+			echo "You get a 5% discount!";
+			}
+			
+		  ?>
+		</p>
+	  </body>
+	</html>
+ 
+4. All Together Now!
+ -> <html>
+	  <head>
+	  </head>
+	  <body>
+		<p>
+		  <?php
+			if (6 < 5) {
+			echo "The condition is true";}
+			else {
+			echo "The condition is false";}
+		  ?>
+		</p>
+	  </body>
+	</html>
+
+-----Control Flow: Switch-----
+
+1. Glance at the Past!
+ -> <!DOCTYPE html>
+	<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+		<?php
+		if (5>3) {
+		echo "if";
+		}
+		elseif (5!=0) {
+		echo "elseif";
+		}
+		else () {
+		echo "else";
+		}
+		
+		?>
+		</body>
+	</html>
+	 
+2. Dipping Your Toe into Switch statements
+ -> Click Save & Submit Code
+
+
+3. Switch Syntax
+ -> <!DOCTYPE html>
+	<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+		<?php
+		$fruit = "Apple";
+		
+		switch ($fruit) {
+			case 'Apple':
+				echo "Yummy.";
+				break;
+			default:
+				echo "None of the above";
+		}
+		
+		?>
+		</body>
+	</html>
+
+4. Multiple Cases. Falling Through!
+ ->  Click Save and Check
+ 
+5. Using "Endswitch". Syntactic Sugar!
+ -> <!DOCTYPE html>
+	<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+		<?php
+		$i = 5;
+		
+		switch ($i) :
+			case 0: 
+				echo '$i is 0.';
+				break;
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+				echo '$i is somewhere between 1 and 5.';
+				break;
+			case 6:
+			case 7:
+				echo '$i is either 6 or 7.';
+				break;
+			default:
+				echo "I don't know how much \$i is.";
+		endswitch;
+		?>
+		</body>
+	</html>
+ 
+ 6. All On Your Own!
+  -><!DOCTYPE html>
+	<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+		<?php
+		 $i = 7;
+		 switch ($i) :
+				case 0: 
+					echo '$i is 0.';
+					break;
+				case 4:
+				case 5:
+					echo '$i is somewhere between 1 and 5.';
+					break;
+				case 6:
+				case 7:
+					echo '$i is either 6 or 7.';
+					break;
+				default:
+					echo "I don't know how much \$i is.";
+		  endswitch;
+		?>
+		</body>
+	</html>
+	
+-----Arrays-----
+1. What's an Array?
+click Save & Submit Code
+
+2. Array Syntax
+<html>
+  <head>
+    <title>Woot, More Arrays!</title>
+  </head>
+  <body>
+    <p>
+      <?php
+        // Add your array elements after
+        // "Beans" and before the final ")"
+        $array = array("Egg", "Tomato", "Beans", "Chips", "Sausage" );        
+      ?>
+    </p>
+  </body>
+</html>
+
+3. Creating Your First Array
+<html>
+  <head>
+    <title>My First Array</title>
+  </head>
+  <body>
+    <p>
+      <?php
+      $friends = array("Aydar","Adel","Azat");
+      ?>
+    </p>
+  </body>
+</html>
+
+4. Access by Offset with []
+<html>
+  <head>
+    <title>Accessing Elements</title>
+  </head>
+  <body>
+    <p>
+      <?php
+        $tens = array(10, 20, 30, 40, 50);
+        echo $tens[2];
+      ?>
+    </p>
+  </body>
+</html>
+
+5. Access by Offset with {}
+<html>
+  <head>
+    <title>Accessing Elements</title>
+  </head>
+  <body>
+    <p>
+      <?php
+        $tens = array(10, 20, 30, 40, 50);
+        echo $tens{2};
+      ?>
+    </p>
+  </body>
+</html>
+
+6. Modifying Array Elements
+<html>
+  <head>
+    <title>Modifying Elements</title>
+  </head>
+  <body>
+    <p>
+      <?php
+        $languages = array("HTML/CSS",
+        "JavaScript", "PHP", "Python", "Ruby");
+        $languages[1] = "C/C++";
+        echo "$languages";
+        // Write the code to modify
+        // the $languages array!
+        
+      ?>
+    </p>
+  </body>
+</html>
+
+7. Deleting Array Elements
+<html>
+  <head>
+    <title>Modifying Elements</title>
+  </head>
+  <body>
+    <p>
+      <?php
+        $languages = array("HTML/CSS",
+        "JavaScript", "PHP", "Python", "Ruby");
+        // Write the code to remove Python here!
+        
+        unset($languages[3]);
+        
+        // Write your code above this line. Don't
+        // worry about the code below just yet; we're
+        // using it to print the new array out for you!
+        
+        foreach($languages as $lang) {
+          print "<p>$lang</p>";
+        }
+      ?>
+    </p>
+  </body>
+</html>
+
+-----For Loops in PHP-----
+1. What's a Loop?
+Click ...
+
+2. 'For' Loop Syntax
+<html>
+  <head>
+    <title>For Loops</title>
+  </head>
+  <body>
+    <p>
+      <?php
+        // Echoes the first five even numbers
+        for ($i = 2; $i < 11; $i = $i + 2) {
+          echo $i;
+        }
+      ?>
+    </p>
+  </body>
+</html>
+
+3. Writing Your First 'For' Loop
+<html>
+  <head>
+    <title>Solo For Loop!</title>
+  </head>
+  <body>
+    <p>
+      <?php
+      for ($i = 10; $i < 109; $i = $i + 10 ) {
+          echo $i." ";
+      }
+      // Write your for loop below!
+      
+      ?>
+    </p>
+  </body>
+</html>
+
+4. When to Use 'For'
+Click ...
+
+5. Loops + Arrays = ForEach
+Click...
+
+6. Practicing with ForEach
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <p>
+      <?php
+        $sentence = array("I'm ", "learning ", "PHP!");
+        
+        foreach ($sentence as $word) {
+          echo $word;
+        }
+      ?>
+    </p>
+  </body>
+</html>
+
+7. All On Your Own!
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <p>
+      <?php
+        $yardlines = array("The 50... ", "the 40... ",
+        "the 30... ", "the 20... ", "the 10... ");
+        // Write your foreach loop below this line
+        foreach ($yardlines as $yard) {
+          echo $yard;
+        }
+        
+        // Write your foreach loop above this line
+        echo "touchdown!";
+      ?>
+    </p>
+  </body>
+</html>
+
+-----While Loops in PHP-----
+
+1. Looping the Loop
+Click...
+
+2. While Loop Syntax
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Your First PHP while loop!</title>
+	</head>
+	<body>
+    <?php
+	$loopCond = true;
+	while ( $loopCond == true ){
+		//Echo your message that the loop is running below
+		echo "<p>The loop is running.</p>";
+		$loopCond = false;
+	}
+	echo "<p>And now it's done.</p>";
+    ?>
+    </body>
+</html>
+
+3. Your First While Loop
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>A loop of your own</title>
+        <link type='text/css' rel='stylesheet' href='style.css'/>
+	</head>
+	<body>
+    <?php
+    $value=false;
+    while ($value==false) {
+        echo "Ninja";
+        $value=true;
+        }
+	//Add while loop below
+    
+    ?>
+    </body>
+</html>
+
+4. Using Endwhile
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>A loop of your own</title>
+        <link type='text/css' rel='stylesheet' href='style.css'/>
+	</head>
+	<body>
+    <?php
+    $value=false;
+    while ($value==false) :
+        echo "Ninja";
+        $value=true;
+    endwhile;
+	//Add while loop below
+    
+    ?>
+    </body>
+</html>
+
+5. How Do You Do-While?
+Click...
+
+6. Completing the Loop
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Much a do-while</title>
+	</head>
+	<body>
+    <?php
+		$loopCond = false;
+		do {
+			echo "<p>The loop ran even though the loop condition is false.</p>"; }
+		while ($loopCond);
+		
+		
+		
+		echo "<p>Now the loop is done running.</p>";
+    ?>
+    </body>
+</html>
+
+7. All On Your Own!
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Your own do-while</title>
+        <link type='text/css' rel='stylesheet' href='style.css'/>
+	</head>
+	<body>
+    <?php
+    $value=true
+        do {
+            echo "Something interesting";}
+        while ($value==false);
+        //write your do-while loop below
+        
+    ?>
+    </body>
+</html>
+
+-----Functions, Part I-----
+1. Introducing Functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

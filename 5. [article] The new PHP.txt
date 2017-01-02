@@ -1,0 +1,11 @@
+https://www.oreilly.com/ideas/the-new-php
+
+PHP 7.0 provides up to twice the perfomance of PHP 5.6
+Also given several standards:
+    PSR-1 (Basic code style);
+    PSR-2 (Strict code style);
+    PSR-3 (Logging interfaces);
+    PSR-4 (Autoloading);
+    PSR-7 (HTTP message interfaces);
+
+
