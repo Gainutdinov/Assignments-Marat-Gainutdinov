@@ -666,6 +666,831 @@ Click...
 
 -----Functions, Part I-----
 1. Introducing Functions
+<html>
+  <p>
+    <?php
+    // Get the length of your own name
+    // and print it to the screen!
+    $length = strlen("Marat");
+    print $length;
+    ?>
+  </p>
+</html>
+
+2. String Functions I
+<html>
+  <p>
+    <?php
+    // Get a partial string from within your own name
+    // and print it to the screen!
+    $myname = "Marat";
+    $partial = substr($myname, 0, 3);
+    print $partial;
+    ?>
+  </p>
+  <p>
+    <?php
+    // Make your name upper case and print it to the screen:
+    $uppercase = strtoupper($myname);
+    print $uppercase;
+    ?>
+  </p>
+  <p>
+    <?php
+    // Make your name lower case and print it to the screen:
+    $lowercase = strtolower($uppercase);
+    print $lowercase;
+    ?>
+  </p>
+</html>
+
+3. String Functions II (=== ???????????? ????? ?.?. ????? ???? ? ??? ?? ??? ??????)
+<html>
+    <p>
+    <?php
+    // Print out the position of a letter that is in
+    // your own name
+    $position = strpos("Marat", "a");
+    print $position;
+    ?>
+    </p>
+    <p>
+    <?php
+    // Check for a false value of a letter that is not
+    // in your own name and print out an error message
+    if (strpos("Marat","h") === false) {
+    print "Sorry, no 'h' in 'Marat";
+    }
+    ?>
+    </p>
+</html>
+
+4. Math Functions I
+<html>
+    <p>
+    <?php
+    // Try rounding a floating point number to an integer
+    // and print it to the screen
+    $round = round(3.02);
+    print $round;
+    ?>
+    </p>
+    <p>
+    <?php
+    // Try rounding a floating point number to 3 decimal places
+    // and print it to the screen
+    $round_decimal = round(3.002213, 3);
+    print $round_decimal;
+    ?>
+    </p>
+</html>
+
+5. Math Functions II
+<html>
+    <p>
+    <?php
+    // Use rand() to print a random number to the screen
+    print rand();
+    ?>
+    </p>
+    <p>
+    <?php
+    $name = "Marat";
+    //print strlen($name)." ". rand(0,strlen($name));
+    // Use your knowledge of strlen(), substr(), and rand() to
+    // print a random character from your name to the screen.
+    print substr($name,rand(0,strlen($name)-1),1)
+    ?>
+    </p>
+</html>
+
+6. Array Functions I
+<html>
+    <p>
+	<?php
+	// Create an array and push 5 elements on to it, then 
+    // print the number of elements in your array to the screen
+    $fav_bands = array();
+    array_push($fav_bands, "Maroon 5");
+    array_push($fav_bands, "Bruno Mars");
+    array_push($fav_bands, "Nickelback");
+    array_push($fav_bands, "Katy Perry");
+    array_push($fav_bands, "Macklemore");
+    print count($fav_bands);
+	?>
+	</p>
+</html>
+
+7. Array Functions II
+<html>
+    <p>
+	<?php
+	// Create an array with several elements in it,
+	// then sort it and print the joined elements to the screen
+    $the_array = array(5, 3, 7, 1);
+    sort($the_array);
+    print join(",", $the_array);
+	?>
+	</p>
+	<p>
+	<?php rsort($the_array);
+	print join(",", $the_array);
+	// Reverse sort your array and print the joined elements to the screen
+
+	?>
+	</p>
+</html>
+
+8. Show What You Know!
+<html>
+    <p>
+	<?php
+	// Create an array and push on the names
+    // of your closest family and friends
+    $my_array = array(); //"sister","mother","father","friends", "Kyle"
+    array_push($my_array, "sister");
+    array_push($my_array, "mother");
+    array_push($my_array, "father");
+    array_push($my_array, "Kyle");
+    array_push($my_array, "Chezh");
+    // Sort the list
+    sort($my_array);
+	// Randomly select a winner!
+	$value = rand( 1,count($my_array) );
+	//print strlen($my_array)." ". rand(0,strlen($my_array));
+    //$winner = rand(0,strlen($my_array));
+	// Print the winner's name in ALL CAPS
+	print (strtoupper($my_array[$value]));
+	?>
+	</p>
+</html>
+
+-----Functions, Part II-----
+1. Function Refresher
+<html>
+    <head>
+		<title></title>
+	</head>
+	<body>
+      <p>
+        <?php
+          echo (strlen("Marat"));
+        ?>
+      </p>
+    </body>
+</html>
+
+2. Function Syntax
+Click...
+
+3. Your First Function
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+      <p>
+        <?php
+        // Write your function below!
+        function displayName() {
+            echo "Marat";
+        }
+        
+        
+        ?>
+      </p>
+    </body>
+</html>
+
+4. Calling Your Function
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+      <p>
+        <?php
+        // Write your function below!
+        function displayName() {
+            echo "Marat";
+        }
+        
+        displayName();
+        ?>
+      </p>
+    </body>
+</html>
+
+5. The Return Keyword
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+      <?php
+      function returnName() {
+      return "Marat";
+      }
+        
+      ?>
+    </body>
+</html>
+
+6. Parameters and Arguments
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+      <p>
+        <?php
+        function greetings ($name) {
+        echo "Greetings, " . $name . "!";
+        }
+        greetings("Marat")
+        ?>
+      </p>
+    </body>
+</html>
+
+7. Practice Makes Perfect
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+      <p>
+        <?php
+        function aboutMe($name, $age) {
+            echo "Hello! My name is $name, and I am $age years old.";
+        }
+        aboutMe("Marat",23);
+        ?>
+      </p>
+    </body>
+</html>
+
+---OOP PHP-----
+1. What's Object-Oriented Programming?
+Click...
+
+2. Objects in Real Life
+Click...
+
+3. Building Your First Class
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Reconstructing the Person Class</title>
+      <link type='text/css' rel='stylesheet' href='style.css'/>
+	</head>
+	<body>
+      <p>
+      <?php
+        class Classname {
+        }
+        $teacher= new Classname();
+        $student = new Classname();
+        ?>
+      </p>
+    </body>
+</html>
+
+4. Property Panic (1)
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Reconstructing the Person Class</title>
+      <link type='text/css' rel='stylesheet' href='style.css'/>
+	</head>
+	<body>
+      <p>
+      <?php
+        class Person {
+            public $isAlive = true;
+            public $firstname;
+            public $lastname;
+            public $age;
+            
+        }
+        $teacher= new Person();
+        $student = new Person();
+        echo $teacher->isAlive;
+        ?>
+      </p>
+    </body>
+</html>
+
+5. Property Panic (2)
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Reconstructing the Person Class</title>
+      <link type='text/css' rel='stylesheet' href='style.css'/>
+	</head>
+	<body>
+      <p>
+      <?php
+        class Person {
+            public $isAlive = true;
+            public $firstname;
+            public $lastname;
+            public $age;
+        
+        public function __construct($prop1, $prop2, $prop3) {
+        $this->firstname = $prop1;
+        $this->lastname = $prop2;
+        $this->age = $prop3;
+        }
+        }
+                $teacher= new Person("boring", "12345", 12345);
+        $student = new Person("Studento_name", "surname", 23);
+        echo $student->age;
+        ?>
+      </p>
+    </body>
+</html>
+
+6. A Method to the Madness
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Reconstructing the Person Class</title>
+      <link type='text/css' rel='stylesheet' href='style.css'/>
+	</head>
+	<body>
+      <p>
+      <?php
+        class Person {
+            public $isAlive = true;
+            public $firstname;
+            public $lastname;
+            public $age;
+        
+        public function __construct($prop1, $prop2, $prop3) {
+        $this->firstname = $prop1;
+        $this->lastname = $prop2;
+        $this->age = $prop3;
+        }
+        public function greet() {
+        return "Hello, my name is " . $this->firstname . " " . $this->lastname . ". Nice to meet you! :-)";
+                }
+        }
+        $teacher= new Person("boring_teacher", "Mr.teacher", 12345);
+        $student = new Person("Studento_name", "surname", 23);
+        echo  $teacher->greet();
+        ?>
+      </p>
+    </body>
+</html>
+
+7. Putting It All Together, Part I
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title> Practice makes perfect! </title>
+      <link type='text/css' rel='stylesheet' href='style.css'/>
+	</head>
+	<body>
+      <p>
+      <?php
+        class Dog {
+            public $numLegs = 4;
+            public $name;
+        
+        public function __construct($prop1) {
+        $this->name = $prop1;
+        }
+        }
+        ?>
+      </p>
+    </body>
+</html>
+
+8. Putting It All Together, Part II
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title> Practice makes perfect! </title>
+      <link type='text/css' rel='stylesheet' href='style.css'/>
+	</head>
+	<body>
+      <p>
+      <?php
+        class Dog {
+            public $numLegs = 4;
+            public $name;
+        
+        public function __construct($prop1) {
+        $this->name = $prop1;
+        }
+        public function bark() {
+        return "Woof!";    
+        }
+        public function greet() {
+        return $this->name;
+        }
+        }
+        $dog1 = new Dog("Barker");
+        $dog2 = new Dog("Amigo");
+        echo $dog1->bark();
+        echo $dog2->greet();
+        ?>
+      </p>
+    </body>
+</html>
+
+9. Challenge Time
+<!DOCTYPE html>
+<html>
+    <head>
+	  <title> Challenge Time! </title>
+      <link type='text/css' rel='stylesheet' href='style.css'/>
+	</head>
+	<body>
+      <p>
+        <?php
+        class Cat {
+        public $isAlive = true;
+        public $numLegs = 4;
+        public $name;
+        public function __construct($prop1) {
+            $this->name = $prop1;
+        }
+        public function meow() {
+        return "Meow meow";
+        }
+        }
+        $new_cat = new Cat("CodeCat");
+        echo $new_cat->meow();
+          // Your code here
+        ?>
+      </p>
+    </body>
+</html>
+
+10. Review
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title> Review Time! </title>
+	</head>
+	<body>
+      <p><?php echo "Now I know the basics of OOP!"; ?></p>
+    </body>
+</html>
+
+-----Object-Oriented PHP-----
+1. Class and Object Refresher
+<html>
+  <head>
+    <title>OOP Review</title>
+  </head>
+  <body>
+    <p>
+      <?php
+      // Create a Person class here:
+      class Person {
+      }
+      $me = new Person();
+      // And create a Person instance called $me here:
+      ?>
+    </p>
+  </body>
+</html>
+
+2. Class and Object Methods
+Click...
+
+3. Inheritance
+<html>
+  <head>
+    <title>The Shape of Things to Come</title>
+  </head>
+  <body>
+    <p>
+      <?php
+        class Shape {
+          public $hasSides = true;
+        }
+        
+        class Square extends Shape {
+        
+        }
+        
+        $square = new Square();
+        // Add your code below!
+        if (property_exists($square,"hasSides")) {
+          echo "I have sides!";
+        }
+      ?>
+    </p>
+  </body>
+</html>
+
+4. Overriding Parent Methods
+<html>
+  <head>
+    <title>Override!</title>
+  </head>
+  <body>
+    <p>
+      <?php
+        class Vehicle {
+          public function honk() {
+            return "HONK HONK!";
+          }
+        }
+        class Bicycle extends Vehicle {
+        public function honk() {
+        return "Beep beep!";
+                }
+            }
+        // Add your code below!
+        $bicycle = new Bicycle();
+        echo $bicycle->honk();
+        
+      ?>
+    </p>
+  </body>
+</html>
+
+5. The Final Word
+<html>
+  <head>
+    <title>Override!</title>
+  </head>
+  <body>
+    <p>
+      <?php
+        class Vehicle {
+          final public function honk() {
+            return "HONK HONK!";
+          }
+        }
+        class Bicycle extends Vehicle {
+        public function honk() {
+        return "Beep beep!";
+                }
+            }
+        // Add your code below!
+        $bicycle = new Bicycle();
+        echo $bicycle->honk();
+        
+      ?>
+    </p>
+  </body>
+</html>
+
+6. Class Constants and Scope Resolution
+<html>
+  <head>
+    <title>Scope it Out!</title>
+  </head>
+  <body>
+    <p>
+      <?php
+      class Person {
+          
+      }
+      class Ninja extends Person {
+        // Add your code here...
+        const stealth = "MAXIMUM";
+      }
+      echo Ninja::stealth;
+      // ...and here!
+      
+      
+      ?>
+    </p>
+  </body>
+</html>
+
+7. The Static Keyword
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <p>
+      <?php
+        class King {
+          // Modify the code on line 10...
+          public static function proclaim() {
+            echo "A kingly proclamation!";
+          }
+        }
+       King::proclaim();
+        // ...and call the method below!
+        
+      ?>
+    </p>
+  </body>
+</html>
+
+8. Putting It All Together
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <p>
+      <?php
+      class Person {
+      public static function say() {
+      echo "Here are my thoughts!";
+      }
+      
+      }
+      class Blogger extends Person {
+      const cats = 50;
+      }
+      Blogger::say();
+      echo Blogger::cats;
+      ?>
+    </p>
+  </body>
+</html>
+
+-----Advanced Arrays-----
+1. Review of Arrays
+<html>
+  <head>
+    <title>Array Review</title>
+  </head>
+  <body>
+    <p>
+      <?php
+        $fruits = array('bananas','apples','pears');
+        echo 'I love eating ' . $fruits[1] . ' too!';
+      ?>
+    </p>
+  </body>
+</html>
+
+2. Associative Arrays
+Click...
+
+3. Using Arrays as Maps
+<html>
+  <head>
+    <title>Making the Connection</title>
+  </head>
+  <body>
+    <p>
+      <?php
+        // This is an array using integers as the indices.
+        // Add 'BMW' as the last element in the array!
+        $car = array(2012, 'blue', 5, "BMW");
+
+        // This is an associative array.
+        // Add the make => 'BMW' key/value pair!
+        $assocCar = array('year' => 2012,
+                   'colour' => 'blue',
+                   'doors' => 5,
+                    'make' => "BMW");
+            
+        // This code should output "BMW"...
+        echo $car[3];
+        echo '<br />';
+            
+        // ...and so should this!
+        echo $assocCar['make'];
+      ?>
+    </p>
+  </body>
+</html>
+
+4. Accessing Associative Arrays
+<html>
+  <head>
+    <title>Accessing Associative Arrays</title>
+  </head>
+  <body>
+    <p>
+      <?php
+        // This is an array using integers as the indices...
+        $myArray = array(2012, 'blue', 5, 'BMW');
+
+        // ...and this is an associative array:
+        $myAssocArray = array('year' => 2012,
+                        'colour' => 'blue',
+                        'doors' => 5,
+                        'make' => 'BMW');
+            
+        // This code will output "blue".
+        echo $myArray[1];
+        echo '<br />';
+            
+        // Add your code here!
+        echo "My car is".$myAssocArray['make']."it's new car, which I bought in".$myArray[0];
+      ?>
+    </p>
+  </body>
+</html>
+
+5. Iterating Over Associative Arrays
+<html>
+  <head>
+    <title>Iteration Nation</title>
+  </head>
+  <body>
+    <p>
+      <?php    
+        $food = array('pizza', 'salad', 'burger');
+        $salad = array('lettuce' => 'with',
+                   'tomato' => 'without',
+                   'onions' => 'with');
+    
+      // Looping through an array using "for".
+      // First, let's get the length of the array!
+      $length = count($food);
+    
+      // Remember, arrays in PHP are zero-based:
+      for ($i = 0; $i < $length; $i++) {
+        echo $food[$i] . '<br />';
+      }
+    
+      echo '<br /><br />I want my salad:<br />';
+    
+      // Loop through an associative array using "foreach":
+      foreach ($salad as $ingredient=>$include) {
+        echo $include . ' ' . $ingredient . '<br />';
+      }
+    
+      echo '<br /><br />';
+    
+      // Create your own array here and loop
+      // through it using foreach!
+      $macdonalds = array('1$' => 'souce',
+           '4$' => 'burger',
+           '5$' => 'big burger');
+      foreach ($macdonalds as $cost => $item) {
+          echo $cost.' '.$item.'<br />';
+      }
+      echo '<br /><br />';
+      ?>
+    </p>
+  </body>
+</html>
+
+6. Multidimensional Arrays
+<html>
+  <head>
+    <title>Blackjack!</title>
+  </head>
+  <body>
+    <p>
+      <?php
+        $deck = array(array('2 of Diamonds', 2),
+                      array('5 of Diamonds', 5),
+                      array('7 of Diamonds', 7),
+                      array('10 of Pique', 10));
+        
+      // Imagine the first chosen card was the 7 of Diamonds.
+      // This is how we would show the user what they have:
+      echo 'You have the ' . $deck[3][0] . '!';
+      ?>
+    </p>
+  </body>
+</html>
+
+7. Putting it All Together
+<html>
+  <head>
+    <title>I am the King of Arrays!</title>
+  </head>
+  <body>
+    <p>
+      <?php
+      // On the line below, create your own associative array:
+      $myArray = array('1$' => 'souce',
+                       '4$' => 'burger',
+                       '5$' => 'big burger');
+        echo $myArray['1$'].' '.'<br />';
+      foreach ($myArray as $cost => $item) {
+          echo $cost.' '.$item.'<br />';
+      }
+      // On the line below, output one of the values to the page:
+     
+          
+      // On the line below, loop through the array and output
+      // *all* of the values to the page:
+     
+     
+      ?>
+    </p>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
 
 
 
