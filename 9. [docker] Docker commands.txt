@@ -1,0 +1,72 @@
+command:      //description
+docker run  //containters have a main process, can have a name
+docker ps // to see all running containers
+docker attach container_name 
+docker exec //starts another process in an existing container
+//great for debugging and DB administration
+//can't add ports, volumes and so on
+docker logs //keep the output of containers, view with docker logs container_name
+//don't let the output get too large
+docker kill container_name
+docker rm container //remove container from disk
+docker run --memory maximum-allowed-memory image-name command
+docker run --cpu-shares
+docker run --cpu-quota
+//don't leave important things in unnamed stopped containers
+//programs in containers are ISOLATED FROM THE INTERNET BY DEFAULT
+//you can group your containers into "private" networks
+//you explicitly choose who can connect to whom
+// this is done by "exposing" ports and "linking" containers
+//docker helps you find other exposed ports with compose services
+//explicitly specifies the port for exact container to make network between containers
+docker run -p outside-port:inside-port/protocol (tcp/udp)
+docker run -p 1234:1234/upd
+//ports forward "from inside to outside"
+//docker link helps to make link between client and server, but server won't now client is connected
+docker network create network-name //creates private network
+//services that listen "locally" by default are only avaliable in the container
+//to allow connections, you need to use the "bind address" "0.0.0.0" inside the container
+//you should use Docker to limit access to only the host
+docker run -p 127.0.0.1:1234:1234/tcp
+docker images //list images we already downloaded
+docker commit //tag images for you for example: docker commit IMAGE ID name-of-my-image
+//full structure of the name of your own image is 
+// registry.example.com:port/organization/image-name:version-tag
+//but you can leave parts thats you don't need
+docker pull //run automatically by docker run
+docker rmi image-name:tag //removes image from disk
+//volumes virtual "discs" to store and share datta
+//volume: persistent (than  containers go away the image will be the same), ephemeral volumes are stay 
+//the same until someone is using them, but afterwards they vanish
+//for sharing a single file you should do
+do
+docker-machine ssh
+mkdir example
+pwd
+docker run -ti -v /home/docker/example:/shared-folder ubuntu bash
+cd /shared-folder/
+touch my-data
+//note that a file must exist before you start the container or it will be assumed to be a directory
+//volumes-from
+//docker-registries manage and distribute images
+//docker (the company) offers these for free
+docker search ubuntu //hub.docker.com to view list of images
+docker login //to make possible the upload images to the hub.docker.com
+//dockerfile this is a small "program" to create an image
+//you run this programm with 
+docker build -t name-of-result . //note the . here
+//when it finishes, the result will be in your local docker registry
+//each line takes the image from the previous line and makes another image
+//the previous image is unchanged
+//it does not edit the state from the previous line
+//dockerfiles ARE NOT SHELL SCRIPTS
+
+
+
+
+
+
+
+
+
+

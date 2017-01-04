@@ -1,0 +1,150 @@
+http://www.ibm.com/developerworks/library/os-php-command/
+same way in other OS, but current examples works in *UNIXs
+first script
+	#!/usr/bin/php -q
+	Hello world //save as a hello-world file
+chmod +x hello-world //should execute in CLI
+php hello-world // run your script
+
+//additionally you will make errors in your code intentionally
+//like in script below
+	#!/usr/bin/php -q
+	Don<'t>code<?php while drunk(); ?<   //save script as a dont-code-drunk.php
+//we can find errors info from
+tail -f /var/log/httpd/error_log
+
+//better way to view erros is to add parentheses and while loop
+//like this, and re-save  it
+	#!/usr/bin/php -q
+	Don<'t>code<?php while (drunk()); ?<
+//after rerun your last script, output will be changed
+	Content-type: text/html
+	X-Powered-By: PHP/4.3.11
+	 
+	<'t>codePHP Fatal error:  Call to undefined function:
+		drunk() in /var/www/html/dont-code-drunk.php on line 2
+
+//You can use the same channels in PHP for input, standard output, and output to the error channel, respectively.
+//STDOUT: echo, print, STDOUT, and php://stdout
+	#!/usr/bin/php -q
+	Output #1.
+	<?php echo "Output #2.";
+	print "Output #3."?>
+//result 
+	Output #1.
+	Output #2.Output #3.
+//as we can see code: Output #1. will also be visible in result even if it's outside of <?php ... ?>
+//that principle will work for another cases
+	<?php
+		$STDOUT = fopen("php://stdout", "w");
+		fwrite($STDOUT, "Output #1.");
+		fclose($STDOUT);
+	?>
+//The above code explicitly opens php://stdout as an output channel, and php://output generally acts the same way 
+//as php://stdout. Recent versions of PHP can use STDOUT as a constant instead of defining 
+//the variable $STDOUT used above.
+	<?php
+		$file = file_get_contents("php://stdin", "r");
+		echo $file;
+	?>
+//This code should act much like cat, echoing back all input given to it. 
+//However, it will not accept arguments at this time.
+<?php
+	$lines = split("\n", file_get_contents("php://stdin", "r"));
+	shuffle($lines);
+	foreach ($lines as $line) {
+			if ($line !== "") {
+					echo "$line\n";
+			}
+	}
+?>
+//   Make sure the hashbang (the first line, which starts with #!) is set to the location of the PHP executable file as 
+//   described earlier Save the file
+//   Use chmod to add executable permissions
+//   Run the program
+<?php
+	array_shift($argv);
+	if (count($argv) == 0) {
+		$argv[0] = "php://stdin";
+	}
+	foreach ($argv as $file) {
+		$lines = split("\n", file_get_contents($file, "r"));
+		shuffle($lines);
+		foreach ($lines as $line) {
+			if ($line !== "") {
+				echo "$line\n";
+			}
+		}
+	}
+?>
+//output
+6                                                                                                                                                                    
+1                                                                                                                                                                                                                                                                                                                           
+2                                                                                                                                                                    
+5                                                                                                                                                                                                                                                                                                                       
+6                                                                                                                                                                    
+4                                                                                                                                                                    
+3
+
+https://www.sitepoint.com/php-command-line-1/
+//tool to automatically run file in OS called "cron"
+<?php
+print "Hello World!";
+?>
+//as before we can use shebang (#) to run script directly via typing helloworld.php instead of php helloworld.php
+#!/usr/local/bin/php
+<?php
+print "Hello World!";
+?>
+//lets execute following script, output is really interesting
+<?php
+$i = 0;
+while ( $i < 10 ) {
+print $i."n";
+sleep(1);
+$i++;
+}
+?>
+//output
+0n1n2n3n4n5n6n7n8n9n
+
+//Part of PHP??™s CLI interface are three ???streams
+php://stdin (read)
+php://stdout (write)
+php://stderr (write)
+//With the PHP 4.3.0+ CLI binary, these three streams are automatically available, identified with the 
+//constants STDIN, STDOUT and STDERR respectively. Here??™s how I can use the STDOUT to fix the above script 
+//so that it behaves correctly on Windows:
+<?php
+$i = 0;
+while ( $i < 10 ) {
+// Write some output
+fwrite(STDOUT, $i."n");
+sleep(1);
+$i++;
+}
+?>
+//output
+0n1n2n3n4n5n6n7n8n9n
+//The count should now be displayed at the moment at which fwrite() is called.
+
+//To be able to read input from the script??™s user, you can use STDIN combined with fgets(), 
+//fread(), fscanf() or fgetc(). For example:
+<?php
+fwrite(STDOUT, "Please enter your name");
+// Read the input
+$name = fgets(STDIN);
+fwrite(STDOUT, "Hello".$name);
+// Exit correctly
+exit(0);
+?>
+
+
+
+
+
+
+
+
+
+
