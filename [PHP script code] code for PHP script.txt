@@ -1,5 +1,4 @@
 #!/usr/local/bin/php
 <?php
-    print "Hello, Docker";
-    }
+    print "Hello, Docker"."\n";
 ?>
