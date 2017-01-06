@@ -1,0 +1,1176 @@
+HTML Basics
+===========
+**Introduction to HTML**
+
+1. Why learn HTML
+<!DOCTYPE html>
+	<strong>Free to change this text.</strong>
+    
+2. HTML and CSS
+<!DOCTYPE html>
+<html>
+feel free to write anything
+</html>
+
+3. Basic terminology
+<!DOCTYPE HTML>
+<html>Hello HTML!
+</html>
+
+4. Make the head
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+My Webpage.	
+</title>	
+</head>	
+</html>
+	
+5. Paragraphs in the body
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+My Webpage.
+</title>	
+</head>
+<body>
+<p>Hello world!</p>
+</body>
+</html>
+
+6. Paragraphs and headings
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>
+			Headings & Paragraphs
+		</title>
+		
+	</head>
+	<body>
+		
+	<h1>
+	Bigger text.
+	</h1>
+	<p>
+	1 Paragraph
+	</p>
+	<p>
+	2 Pargraph
+	</p>
+	</body>
+</html>
+
+7. More about headings!
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>
+			Headings & Paragraphs
+		</title>
+		
+	</head>
+	<body>
+		
+	<h1>
+	Bigger text.
+	</h1>
+	<p>
+	1 Paragraph h1
+	</p>
+	<p>
+	2 Pargraph h1
+	</p>
+	<h3>
+	<p>
+	Second h3
+	</p>
+	</h3>
+	<h5>
+	<p>
+	Third h5
+	</p>
+	</h5>
+	</body>
+</html>
+
+8. Using every heading
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>
+			Headings & Paragraphs
+		</title>
+		
+	</head>
+	<body>
+		
+	<h1>
+	Bigger text.
+	</h1>
+	<p>
+	1 Paragraph h1
+	</p>
+	<p>
+	2 Pargraph h1
+	</p>
+	<h3>
+	<p>
+	Second h3
+	</p>
+	</h3>
+	<h5>
+	<p>
+	Third h5
+	</p>
+	</h5>
+	<h2>
+	<p>
+	Fourth h2
+	</p>
+	</h2>
+	<h4>
+	<p>
+	Fifth h4
+	</p>
+	</h4>
+	<h6>
+	<p>
+	Sixth h6
+	</p>
+	</h6>
+	</body>
+</html>
+
+9. Mid-lesson breather
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>
+		<title>
+		<h3> New title added h3 </h3>
+		<p> Cat </p>
+		<p> Dog </p>
+		<p> Sparrow </p>
+		</title>
+			Headings & Paragraphs
+		</title>
+		
+	</head>
+	<body>
+		
+	<h1>
+	Bigger text.
+	</h1>
+	<p>
+	1 Paragraph h1
+	</p>
+	<p>
+	2 Pargraph h1
+	</p>
+	<h3>
+	<p>
+	Second h3
+	</p>
+	</h3>
+	<h5>
+	<p>
+	Third h5
+	</p>
+	</h5>
+	<h2>
+	<p>
+	Fourth h2
+	</p>
+	</h2>
+	<h4>
+	<p>
+	Fifth h4
+	</p>
+	</h4>
+	<h6>
+	<p>
+	Sixth h6
+	</p>
+	</h6>
+	</body>
+</html>
+
+10. You're going places!
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<a href="https://www.codecademy.com"> Codecademy.com </a>
+	</body>
+</html>
+
+11. Adding images
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<img src="https://s3.amazonaws.com/codecademy-blog/assets/f3a16fb6.jpg" />
+	<img src="https://s3.amazonaws.com/codecademy-blog/assets/ninja_zpsa5dbe37a.jpg" />
+	</body>
+</html>
+
+12. Click that image
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<img src="https://s3.amazonaws.com/codecademy-blog/assets/f3a16fb6.jpg" />
+	<img src="https://s3.amazonaws.com/codecademy-blog/assets/ninja_zpsa5dbe37a.jpg" />
+	<a href="https://www.yandex.com"><img src="https://yastatic.net/morda-logo/i/share-logo-ru.png"> </a>
+	</body>
+</html>
+
+13. Images and links
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<a href="https://www.yandex.com"> yandex.ru </a>
+			<img src="https://s3.amazonaws.com/codecademy-blog/assets/f3a16fb6.jpg" />
+	<img src="https://s3.amazonaws.com/codecademy-blog/assets/ninja_zpsa5dbe37a.jpg" />
+	<a href="https://www.yandex.com"><img src="https://yastatic.net/morda-logo/i/share-logo-ru.png"> </a>	
+		
+		
+		
+	</body>
+</html>
+
+14. Congratulations!
+Click...
+
+**Build Your Own Webpage**
+1. What you'll be making
+Click...
+
+2. Every house needs a frame
+<!DOCTYPE html>
+<html>
+<head><title> </title> </head>
+<body>
+</body>
+</html>
+
+3. It's better with a header
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+**HTML Basics III**
+7. Table Heads
+<html>
+    <head>
+        <title>Table Time</title>
+    </head>
+    
+    <body>
+        
+        <table border="1px">
+            <thead>
+                <tr> <th>Famous Monster</th> <th>Birth Year</th</tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>King Kong</td>
+                    <td>1933</td>     
+                </tr>
+                
+                <tr>
+                    <td>Dracula</td>
+                    <td>1897</td>
+                </tr>
+                
+                <tr>
+                    <td>Bride of Frankenstein</td>
+                    <td>1935</td>
+                </tr>
+            </tbody>
+        </table>   
+    </body>
+</html>
+
+8. Naming your table
+<html>
+    <head>
+        <title>Table Time</title>
+    </head>
+    
+    <body>
+        
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th colspan="2">Famous Monsters by Birth Year</th>
+                </tr>
+                <tr>
+                    <th>Famous Monster</th>
+                    <th>Birth Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>King Kong</td>
+                    <td>1933</td>     
+                </tr>
+                <tr>
+                    <td>Dracula</td>
+                    <td>1897</td>
+                </tr>
+                
+                <tr>
+                    <td>Bride of Frankenstein</td>
+                    <td>1935</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+	
+9. Style that head!
+<html>
+    <head>
+        <title>Table Time</title>
+    </head>
+    <body>
+        <table style="border-collapse:collapse;">
+            <thead>
+                <tr>
+                    <th colspan="2" style="color:red">Famous Monsters by Birth Year</th>
+                </tr>
+                <tr style="border-bottom:1px solid black;">
+                    <th style="padding:5px;"><em>Famous Monster</em></th>
+                    <th style="padding:5px;border-left:1px solid black;"><em>Birth Year</em></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding:5px;">King Kong</td>
+                    <td style="padding:5px;border-left:1px solid black;">1933</td>     
+                </tr>
+                <tr>
+                    <td style="padding:5px;">Dracula</td>
+                    <td style="padding:5px;border-left:1px solid black;">1897</td>
+                </tr>
+                <tr>
+                    <td style="padding:5px;">Bride of Frankenstein</td>
+                    <td style="padding:5px;border-left:1px solid black;">1944</td>
+                </tr>
+            </tbody>
+        </table>  
+    </body>
+</html>
+
+10. Recap
+Click...
+
+11. 'Div'ide and conquer
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Result</title>
+	</head>
+	<body>
+		<div style="width:50px; height:50px; background-color:red"></div>
+		<div style="width:50px; height:50px; background-color:blue"></div>
+		<div style="width:50px; height:50px; background-color:green"></div>
+		<div style="width:50px; height:50px; background-color:yellow"></div>
+		
+	</body>
+</html>
+
+12. Link it!
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Result</title>
+	</head>
+	<body>
+		<div style="width:50px; height:50px; background-color:red"></div>
+		<div style="width:50px; height:50px; background-color:blue"></div>
+		<div style="width:50px; height:50px; background-color:green"></div>
+		<a href="https://www.yandex.ru"><div style="width:50px; height:50px; background-color:yellow"></div></a>
+	</body>
+</html>
+
+13. Spantastic
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p>This text is black, except for the word<span style="color:red"> red</span>!</p>
+	</body>
+</html>
+
+14. Span is the man
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Result</title>
+	</head>
+	<body>
+		<p>My favorite font is <span style="font-family:Impact"> Impact </span>!</p>
+	</body>
+</html>
+
+15. Recap
+Click...
+
+**Clickable Photo Page**
+1. Some photos on your table
+Click...
+
+2. Row by row
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+		<title>My Photo Page</title>
+	</head>
+	<body>
+	    <table>
+	        <tbody>
+    	        <tr></tr>
+    	        <tr></tr>
+    	        <tr></tr>
+	        </tbody>
+	    <table>
+	</body>
+</html>
+
+3. Cell by cell
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+		<title>My Photo Page</title>
+	</head>
+	<body>
+	    <table>
+	        <tbody>
+    	        <tr>
+    	            <td></td>
+    	            <td></td>
+    	            <td></td>
+    	        </tr>
+    	        <tr>
+    	            <td></td>
+    	            <td></td>
+    	            <td></td>
+    	        </tr>
+    	        <tr>
+    	            <td></td>
+    	            <td></td>
+    	            <td></td>
+    	        </tr>
+	        </tbody>
+	    <table>
+	</body>
+</html>
+
+4. Remember: it's better with a header
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+		<title>My Photo Page</title>
+	</head>
+	<body>
+	    <table>
+	    <thead style="colspan=3">
+	        Album
+	        <th>Photos</th>
+	    </thead>
+	        <tbody>
+    	        <tr>
+    	            <td></td>
+    	            <td></td>
+    	            <td></td>
+    	        </tr>
+    	        <tr>
+    	            <td></td>
+    	            <td></td>
+    	            <td></td>
+    	        </tr>
+    	        <tr>
+    	            <td></td>
+    	            <td></td>
+    	            <td></td>
+    	        </tr>
+	        </tbody>
+	    <table>
+	</body>
+</html>
+
+5. Nine pictures are worth 9,000 words
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+		<title>My Photo Page</title>
+	</head>
+	<body>
+	    <table>
+	    <thead style="colspan=3">
+	        Album
+	        <th>Photos</th>
+	    </thead>
+	        <tbody>
+    	        <tr>
+    	            <td><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></td>
+    	            <td><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></td>
+    	            <td><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></td>
+    	        </tr>
+    	        <tr>
+    	            <td><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></td>
+    	            <td><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></td>
+    	            <td><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></td>
+    	        </tr>
+    	        <tr>
+    	            <td><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></td>
+    	            <td><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></td>
+    	            <td><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></td>
+    	        </tr>
+	        </tbody>
+	    <table>
+	</body>
+</html>
+
+6. Link 'em up!
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+		<title>My Photo Page</title>
+	</head>
+	<body>
+	    <table>
+	    <thead style="colspan=3">
+	        Album
+	        <th>Photos</th>
+	    </thead>
+	        <tbody>
+    	        <tr>
+    	            <td><a href="http://codecademy.com"><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></a></td>
+    	            <td><a href="http://codecademy.com"><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></a></td>
+    	            <td><a href="http://codecademy.com"><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></a></td>
+    	        </tr>
+    	        <tr>
+    	            <td><a href="http://codecademy.com"><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></a></td>
+    	            <td><a href="http://codecademy.com"><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></a></td>
+    	            <td><a href="http://codecademy.com"><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></a></td>
+    	        </tr>
+    	        <tr>
+    	            <td><a href="http://codecademy.com"><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></a></td>
+    	            <td><a href="http://codecademy.com"><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></a></td>
+    	            <td><a href="http://codecademy.com"><img src="https://yastatic.net/images-islands/_/RQWGFypkIRAzEbaERs_Sq8zKRzY.svg"/></a></td>
+    	        </tr>
+	        </tbody>
+	    <table>
+	</body>
+</html>
+
+7. The sky's the limit
+Click...
+
+**CSS: An Overview**
+1. Seeing is believing
+body {
+	background-color: #b7d1c4
+}
+
+h2 {
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	color: #acd1b2;
+}
+
+img {
+	height: 170px;
+	width: 170px;
+	box-shadow: rgba(0,0,0,0.2) 10px 10px;
+
+}
+
+#navbar {
+	position: fixed;
+	top:10px;
+	left:50%;
+	margin-left:-254px;
+}
+
+#header {
+	position: relative;
+	top: -10px;
+	background-color: #3c4543;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+ul{
+	list-style-type: none;
+	position: fixed;
+	margin: -10px;
+}
+
+li {
+	display: inline;
+	border: 2px solid #000000;
+	font-family: Futura, Tahoma, sans-serif;
+	color: #ffffff;
+	padding: 5px;
+	border-radius: 5px 5px;
+	background-color: #cc0323
+}
+
+#left{
+	width: 45%;
+	float: left;
+}
+
+p {
+	font-family: Tahoma;
+	font-size: 1em;
+}
+
+#right{
+	width: 45%;
+	float: right;
+}
+
+table {
+	border: #000000 1px solid;
+	background-color: #acd1b2;
+	float: right;
+	margin-right: 10px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+td {
+	height: 75px;
+	width: 75px;
+}
+
+td img {
+	height: 75px;
+	width: 75px;
+	box-shadow: none;
+}
+
+th {
+	font-family: Verdana;
+	font-size: 1em;
+	font-weight: normal;
+	color: #3c4543
+}
+
+#bottom_left{
+	border-bottom-left-radius: 15px;
+}
+
+#bottom_right{
+	border-bottom-right-radius: 15px;
+}
+
+#footer{
+	clear: both;
+	position: relative;
+	bottom: -20px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	height: 75px;
+	background-color: #3c4543;
+}
+
+#button{
+	border: 2px solid #000000;
+	float:left;
+	position: relative;
+	left: 229px;
+	bottom: -20px;
+	border-radius: 5px;
+	background-color: #cc0323;
+	height: 30px;
+	width: 150px;
+	
+}
+
+#button p{
+	position: relative;
+	bottom: 10px;
+	font-size: 0.8em;
+	color: #acd1b2;
+	text-align: center;
+}
+
+.bold{
+	font-family: tahoma;
+	font-weight: bold;
+	font-size: 1.2em;
+	font-variant: small-caps;
+	color: #ffffff;
+}
+
+2. What CSS is
+p {
+	color: red;
+}
+span {
+    color: blue;
+	/*Write your CSS here!*/
+}
+
+3. Why separate form from function?
+p {
+    font-size: 100px;
+}
+span {
+    font-family: cursive;
+	/*Add your CSS here!*/
+}
+
+4. If it's in, it's out!
+Click...
+
+5. Link it up!
+<!DOCTYPE html>
+<html>
+	<head>
+	<link type="text/css", rel="stylesheet", href="stylesheet.css">
+		<title>Result</title>
+	</head>
+	<body>
+		<p>I want to be SIZE 44 font!</p>
+	</body>
+</html>
+
+6. PSA: Self-closing tags
+Click...
+
+7. Syntax for the wintax
+p 
+{
+  color:green;  
+}
+
+8. One selector, many properties
+p 
+{
+  color:green;
+  font-family:Garamond;
+  font-size:24px;
+}
+
+9. Many selectors, many properties
+/*You can do this! Write your CSS below.*/
+h3
+{
+    color:red;
+}
+p
+{
+    font-family:Courier;
+}
+span
+{
+    background-color:yellow;
+}
+
+10. The importance of semicolons
+h3 {
+	font-family:Verdana;
+	color:blue;
+}
+
+p {
+	font-family:Garamond;
+	font-size:16px;
+{
+
+11. Color commentary
+p {
+/*	color:red; */
+}
+
+12. Check yourself before you wreck yourself
+h1 
+{
+    font-family:Verdana;
+}
+h3 
+{
+    font-family:Courier;
+}    
+p 
+{
+    color:purple;
+}
+/* My comment is here */
+
+13. Hexawhatnow?
+Click...
+
+14. Roses are red...
+h3 {
+	color:#cc6666/*Add your CSS hex color here!*/
+}
+
+h2 {
+	color:#8a2be2/*Add your CSS hex color here!*/
+}
+
+15. Pixels and ems
+Click...
+
+16. A font of knowledge
+/*Add your CSS below!*/
+
+h1 
+{
+    font-family:serif;
+}
+h2 
+{
+    font-family:sans-serif;
+}
+h3
+{
+    font-family: cursive;
+}
+
+17. Backup values
+/*Add your CSS below!*/
+
+h1 
+{
+    font-family:  Times, Serif;
+}
+h2 
+{
+    font-family: Verdana, Sans-serif;
+}
+h3
+{
+    font-family: Vivaldi, Cursive;
+}
+
+18. Review
+Click...
+
+19. Background color, height, and width
+/*Add your CSS below!*/
+div
+{
+background-color: #cc0000;
+height:100px;
+width:100px;
+}
+
+20. Bordering on insanity
+/*Add your CSS below!*/
+td
+{
+    height:50px;
+    border: 1px dashed blue;
+}
+table
+{
+    border: 1px solid black;
+}
+
+21. Links and text decoration
+/*Add your CSS below!*/
+a
+{
+    color:#cc0000;
+    text-decoration:none;
+}
+
+22. HTML + CSS = BFFs
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Result</title>
+		<link>
+		<a href="stylesheet.css" type='text/css' rel='stylesheet'></a>
+		</link>
+	</head>
+	<body></body>
+</html>
+
+23. Many selectors, many properties
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Result</title>
+		<link>
+		<a href="stylesheet.css" type='text/css' rel='stylesheet'></a>
+		</link>
+	</head>
+	<body>
+	    <h1 style="font-family: Verdana; color: #576d94">Heading 1st</h1>
+	    <h1 style="font-family: Verdana; color: #576d94">Heading 2nd</h1>
+	    <p style="color:#4A4943;font-size:18px;">First line in p</p>
+	    <p style="color:#4A4943;font-size:18px">Second line in p</p>
+	</body>
+</html>
+
+24. Fall back!
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Result</title>
+		<link>
+		<a href="stylesheet.css" type='text/css' rel='stylesheet'></a>
+		</link>
+	</head>
+	<body>
+	    <h1>Heading 1st</h1>
+	    <h1>Heading 2nd</h1>
+	    <p>First line in p</p>
+	    <p>Second line in p</p>
+	</body>
+</html>
+
+h1 {
+    font-family: Verdana, sans-serif;
+    color:#576D94;
+}
+p {
+     font-family:Garamond,serif;
+     color:#4A4943;
+     font-size:18px;   
+}
+
+25. Size and borders
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Result</title>
+		<link>
+		<a href="stylesheet.css" type='text/css' rel='stylesheet'></a>
+		</link>
+	</head>
+	<body>
+	    <h1>Heading 1st</h1>
+	    <h1>Heading 2nd</h1>
+	    <p>First line in p</p>
+	    <p>Second line in p</p>
+	    <img style="border: 1px Solid #4682b4;height: 100px;
+    width: 300px;"src="http://bit.ly/NnVbxt" />
+	</body>
+</html>
+
+h1 {
+    font-family: Verdana,sans-serif;
+    color: #576D94;
+}
+p {
+    font-size: 18px;
+    color: #4A4943;
+    font-family: Garamond,serif;
+}
+img {
+    height: 100px;
+    width: 300px;
+}
+
+26. Links and text decoration
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Result</title>
+		<link>
+<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+		</link>
+	</head>
+	<body>
+	    <h1>Heading 1st</h1>
+	    <h1>Heading 2nd</h1>
+	    <p>First line in p</p>
+	    <p>Second line in p</p>
+	    <img style="border: 1px Solid #4682b4;height: 100px;
+    width: 300px;"src="http://bit.ly/NnVbxt" />
+        <a href="http://www.google.com" style="text-decoration: none; color: #cc0000">http://www.google.com </a>
+	</body>
+</html>
+
+h1 {
+    font-family: Verdana,sans-serif;
+    color: #576D94;
+}
+p {
+    font-size: 18px;
+    color: #4A4943;
+    font-family: Garamond,serif;
+}
+img {
+    height: 100px;
+    width: 300px;
+}
+link {
+    text-decoration: none;
+    color: #cc0000;
+}
+
+**Design a Button for Your Website**
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
