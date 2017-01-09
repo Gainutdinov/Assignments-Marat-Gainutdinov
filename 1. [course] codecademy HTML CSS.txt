@@ -1160,17 +1160,1486 @@ link {
 }
 
 **Design a Button for Your Website**
+1. What you'll be building
+Click...
 
+2. Drawing your button
+img {
+	display: block;
+	height: 100px;
+	width: 300px;
+	margin: auto;
+}
 
+p {
+	text-align: center;
+	font-family: Garamond, serif;
+	font-size: 18px;
+}
 
+/*Start adding your CSS below!*/
+div {
+height:50px;
+width:120px;
+border-color:#6495ed;
+background-color:#bcd2ee;
+border-style:dashed;
+border-width:2px;
+border-color:#6495ED;
+}
 
+3. Shaping your button
+img {
+	display: block;
+	height: 100px;
+	width: 300px;
+	margin: auto;
+}
 
+p {
+	text-align: center;
+	font-family: Garamond, serif;
+	font-size: 18px;
+}
 
+/*Start adding your CSS below!*/
+div {
+    height:50px;
+    width:120px;
+    border-color:#6495ed;
+    background-color:#bcd2ee;
+    border-style:dashed;
+    border-width:2px;
+    border-color:#6495ED;
+    border-radius:5px;
+}
 
+4. Positioning your button
+img {
+	display: block;
+	height: 100px;
+	width: 300px;
+	margin: auto;
+}
 
+p {
+	text-align: center;
+	font-family: Garamond, serif;
+	font-size: 18px;
+}
 
+/*Start adding your CSS below!*/
+div {
+    height:50px;
+    width:120px;
+    border-color:#6495ed;
+    background-color:#bcd2ee;
+    border-style:dashed;
+    border-width:2px;
+    border-color:#6495ED;
+    border-radius:5px;
+    margin:auto;
+    text-align:center;
+}
 
+5. Adding the link
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+		<title>About Me</title>
+	</head>
+	<body>
+		<img src="https://s3.amazonaws.com/codecademy-blog/assets/46838757.png"/>
+		<p>We're Codecademy! We're here to help you learn to code.</p><br/><br/>
+		<div>
+			<a href="https://www.codecademy.com" style="    text-decoration:none; color:green; font-family:Arial;"> codecademy.com </a>
+		</div>
+	</body>
+</html>
 
+img {
+	display: block;
+	height: 100px;
+	width: 300px;
+	margin: auto;
+}
 
+p {
+	text-align: center;
+	font-family: Garamond, serif;
+	font-size: 18px;
+}
 
+/*Start adding your CSS below!*/
+div {
+    height:50px;
+    width:120px;
+    border-color:#6495ed;
+    background-color:#bcd2ee;
+    border-style:dashed;
+    border-width:2px;
+    border-color:#6495ED;
+    border-radius:5px;
+    margin:auto;
+    text-align:center;
+    text-decoration:none;
+    color:green;
+    font-family:Arial;
+}
+
+6. It's alive!
+Click...
+
+**CSS Selectors**
+1. All HTML elements are selectors
+body {
+ background-color:#C6E2FF;   
+}
+
+2. Multiple Selectors
+div div div h3 {
+color:red;
+}
+
+3. One selector to rule them all
+* {
+border: 1px dashed #3A5FCD;
+}
+
+4. Rock Your Selectors
+/*Add your CSS below!*/
+p {
+color:#00E5EE;   
+}
+div p {
+color:#CC0000;    
+}
+* {
+border:2px solid #3A5FCD;    
+}
+
+5. Branching
+Click...
+
+6. Parents, children, and siblings
+Click...
+
+7. Swinging from branch to branch
+/*Add your CSS below!*/
+li a {
+text-decoration:none;
+font-family:cursive;
+}
+
+8. Can you swing it?
+body  p {
+font-family:Garamond; 
+font-weight:bold;
+}
+
+div p {
+font-weight:bold;
+color:#7AC5CD;
+}
+
+ul li p {
+ color:#000000;  
+ text-decoration:underline;
+}
+
+9. See it to believe it
+Click...
+
+10. Beyond HTML elements
+
+.red {
+	color: red;
+}
+
+#rogue {
+	color: #FF00FF;
+	font-weight: bold;
+	font-family: cursive;
+}
+
+11. Keeping it classy
+.fancy {
+    height: 100px;
+    color: #0000CD;
+    font-family:cursive;
+    font-size:15px;
+}
+
+12. ID, please!
+#serious {
+font-family:Courier;
+color: #cc0000;
+}
+
+13. Putting it all together
+#intro {
+color:#b83c3a;
+}
+.standout {
+color:#F7AC5F;
+font-family:Verdana;
+}
+
+14. Even finer control
+a:hover {
+	color: #cc0000;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+15. Links
+a {
+text-decoration:none;
+}
+a:link {
+ color: #008B45;  
+}
+a:hover {
+ color: #00FF00; 
+}
+a:visited {
+ color:#EE9A00;   
+}
+
+16. First child
+p:first-child {
+   font-family:cursive;
+}
+
+17. Nth child
+p:nth-child(2) {
+   font-family:Tahoma;
+}
+p:nth-child(3) {
+   color:#CC0000;
+}
+p:nth-child(4) {
+   background-color:#00ff00;
+}
+p:nth-child(5) {
+   font-size:22px;
+}
+
+18. Show it if you know it!
+/*Add your CSS below!*/
+a:hover {
+ text-decoration:none;   
+}
+a:first-child {
+ color: #CDBE70;  
+}
+a:nth-child(3) {
+ color: #FFC125;  
+}
+
+19. Final section breather
+Click...
+
+20. Multiple selectors
+div	ul li p {
+ font-size:30px;   
+}
+
+21. Class selectors
+.fancy {
+ font-family:Cursive;  
+ color:violet;
+}
+
+22. ID selectors
+.fancy {
+ font-family:Cursive;  
+ color:violet;
+}
+#serious {
+ font-family:Courier;
+ color:#8C8C8C;
+}
+
+23. Pseudo selectors
+.fancy {
+ font-family:Cursive;  
+ color:violet;
+}
+#serious {
+ font-family:Courier;
+ color:#8C8C8C;
+}
+p:nth-child(4) {
+font-size:26px;    
+}
+
+Sorting Your Friends
+1. What you'll be building
+Click...
+
+2. Divide and conquer
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+		<title>My Social Network</title>
+	</head>
+	<body>
+		<!--Add your HTML below!-->
+		<div>First div</div>
+		<div>Second div</div>
+		<div>Third div</div>
+	</body>
+</html>
+
+3. Style those divs!
+div {
+	display: inline-block;
+	margin-left: 5px;
+	height:100px;
+	width:100px;
+	border-radius:100%;
+	border:2px solid black;
+}
+
+4. Classify
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+		<title>My Social Network</title>
+	</head>
+	<body>
+		<!--Add your HTML below!-->
+		<div class="friend">Friend</div>
+		<div class="family">family</div>
+		<div class="enemy">enemy</div>
+	</body>
+</html>
+
+5. Use classes to add class
+div {
+	display: inline-block;
+	margin-left: 5px;
+	height:100px;
+	width:100px;
+	border-radius:100%;
+	border:2px solid black;
+}
+.friend {
+border: 2px dashed #008000;
+}
+.family {
+border: 2px dashed #0000FF;
+}
+.enemy {
+border: 2px dashed #FF0000;
+}
+
+6. No ID, no entry
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+		<title>My Social Network</title>
+	</head>
+	<body>
+		<!--Add your HTML below!-->
+		<div class="friend" id="best_friend">Friend</div>
+		<div class="family">family</div>
+		<div class="enemy" id="archnemesis">enemy</div>
+	</body>
+</html>
+
+7. Identify your IDs
+div {
+	display: inline-block;
+	margin-left: 5px;
+	height:100px;
+	width:100px;
+	border-radius:100%;
+	border:2px solid black;
+}
+.friend {
+border: 2px dashed #008000;
+}
+.family {
+border: 2px dashed #0000FF;
+}
+.enemy {
+border: 2px dashed #FF0000;
+}
+#best_friend {
+ border:4px solid #00c957;   
+}
+#archnemesis {
+ border:4px solid #CC0000;   
+}
+
+8. You've done it!
+Click...
+
+**CSS Positioning**
+1. See it to believe it
+* {
+border: 1px dashed #0000ff;
+}
+
+2. Taking up space
+* {
+	border: 1px dashed blue;
+}
+
+div {
+	height: 50px;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 5px;
+	/*Add your CSS here!*/
 	
+}
+
+#one {
+	background-color: #FF0000;
+}
+
+#two {
+	background-color: #0000FF;
+}
+
+#three {
+	background-color: #FFD700;
+}
+
+#four {
+	background-color: #308014;
+}
+div {
+ display:block;   
+}
+
+3. Inline-block
+* {
+	border: 1px dashed blue;
+}
+
+div {
+	height: 50px;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 5px;
+	/*Add your CSS here!*/
+	
+}
+
+#one {
+	background-color: #FF0000;
+}
+
+#two {
+	background-color: #0000FF;
+}
+
+#three {
+	background-color: #FFD700;
+}
+
+#four {
+	background-color: #308014;
+}
+div {
+ display:inline-block;   
+}
+
+4. Inline
+* {
+	border: 1px dashed blue;
+}
+
+div {
+	height: 50px;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 5px;
+	/*Add your CSS here!*/
+	
+}
+
+#one {
+	background-color: #FF0000;
+}
+
+#two {
+	background-color: #0000FF;
+}
+
+#three {
+	background-color: #FFD700;
+}
+
+#four {
+	background-color: #308014;
+}
+div {
+ display:inline;   
+}
+
+5. None!
+* {
+	border: 1px dashed blue;
+}
+
+div {
+	height: 50px;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 5px;
+	/*Add your CSS here!*/
+	
+}
+
+#one {
+	background-color: #FF0000;
+}
+
+#two {
+	background-color: #0000FF;
+}
+
+#three {
+	background-color: #FFD700;
+}
+
+#four {
+	background-color: #308014;
+}
+div {
+ display:none;   
+}
+
+6. Sketching it out
+Click...
+
+7. Margin
+* {
+	border: 1px dashed black;
+}
+
+div {
+	height: 50px;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: #308014;
+	margin:auto;
+}
+
+8. Margin top, right, bottom, left
+* {
+	border: 1px dashed black;
+}
+
+div {
+	height: 50px;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: #308014;
+	margin:20px 50px 10px 5px;
+}
+
+9. Borders
+* {
+	border: 1px dashed black;
+}
+
+div {
+	height: 50px;
+	width: 100px;
+	border: 4px solid #ff0000;
+	border-radius: 5px;
+	background-color: #308014;
+	margin:20px 50px 10px 5px;
+}
+
+10. Padding
+* {
+	border: 1px dashed black;
+}
+
+div {
+	height: 50px;
+	width: 100px;
+	border: 4px solid #ff0000;
+	border-radius: 5px;
+	background-color: #308014;
+	margin:20px 50px 10px 5px;
+    padding-top:40px;
+    padding-right:40px;
+    padding-bottom:40px;
+    padding-left:40px;
+}
+
+11. Negative values
+* {
+	border: 1px dashed black;
+}
+
+div {
+	height: 50px;
+	width: 100px;
+	border: 4px solid #ff0000;
+	border-radius: 5px;
+	background-color: #308014;
+	margin:-20px 50px 10px 5px;
+    padding-top:40px;
+    padding-right:40px;
+    padding-bottom:40px;
+    padding-left:40px;
+}
+
+12. Review
+div {
+   border:1px solid black;
+   background-color:#cc0000;
+   margin:10px 5px 5px 50px;
+   padding:0px 30px 0px 10px;
+}
+
+13. To the right!
+div {
+	height: 300px;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: #308014;
+	/*Add your CSS here!*/
+	float:right;
+}
+
+14. To the left!
+div {
+	height: 300px;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: #308014;
+	/*Add your CSS here!*/
+	float:left;
+}
+
+15. Float for two
+div {
+	height: 300px;
+	width: 300px;
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: #308014;
+	/*Add your CSS here!*/
+	float: right;
+}
+
+p {
+	font-family: Verdana, sans-serif;
+	font-size: 20px;
+	width: 280px;
+	/*Add your CSS here!*/
+	float: left;
+}
+
+16. Clearing elements
+div {
+	border-radius: 5px;
+}
+
+#header {
+	height: 50px;
+	background-color: #F38630;
+	margin-bottom: 10px;
+}
+
+.left {
+	height: 300px;
+	width: 150px;
+	background-color: #A7DBD8;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.right {
+	height: 300px;
+	width: 450px;
+	background-color: #E0E4CC;
+	float: right;
+	margin-bottom: 10px;
+}
+
+#footer {
+	height: 50px;
+	background-color: #69D2E7;
+	/*Add your CSS here!*/
+    clear:both;
+}
+
+17. Static by default
+Click...
+
+18. Absolute positioning
+div {
+	height: 100px;
+	width: 100px;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+
+#inner {
+	height: 75px;
+	width: 75px;
+	background-color: #547980;
+	/*Add your CSS here!*/
+	position:absolute;
+	margin-left:20px;
+}
+
+#outer {
+	height: 1500px;
+	width: 150px;
+	background-color: #45ADA8;
+	position: absolute;
+	margin-left: 100px;
+}
+
+19. Relative positioning
+div {
+	height: 100px;
+	width: 100px;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+
+#inner {
+	height: 75px;
+	width: 75px;
+	background-color: #547980;
+	/*Add your CSS here!*/
+	position:relative;
+	margin-left:200px;
+}
+
+#outer {
+	height: 1500px;
+	width: 150px;
+	background-color: #45ADA8;
+	position: absolute;
+	margin-left: 100px;
+}
+
+20. Fixed positioning
+div {
+	height: 100px;
+	width: 100px;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+
+#inner {
+	height: 75px;
+	width: 75px;
+	background-color: #547980;
+	/*Add your CSS here!*/
+	position:fixed;
+	margin-left:200px;
+}
+
+#outer {
+	height: 1500px;
+	width: 150px;
+	background-color: #45ADA8;
+	position: absolute;
+	margin-left: 100px;
+}
+
+21. The story so far
+Click...
+
+22. Navigation bar, where are you?
+body {
+	background-color: #b7d1c4
+}
+
+h2 {
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	color: #acd1b2;
+}
+
+img {
+	height: 170px;
+	width: 170px;
+	box-shadow: rgba(0,0,0,0.2) 10px 10px;
+
+}
+
+#navbar {
+	/*Add your CSS here!*/
+	position:fixed;
+	margin-top:-10px;
+	left:50%;
+	margin-left:-254px;
+}
+
+#header {
+	position: relative;
+	top: -10px;
+	background-color: #3c4543;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+ul{
+	list-style-type: none;
+	position: fixed;
+	margin: -10px;
+}
+
+li {
+	/*Add your CSS here!*/
+	
+	border: 2px solid #000000;
+	font-family: Futura, Tahoma, sans-serif;
+	color: #ffffff;
+	border-radius: 5px 5px;
+	background-color: #cc0323
+}
+
+#left{
+	/*Add your CSS here!*/
+	
+}
+
+p {
+	font-family: Tahoma;
+	font-size: 1em;
+}
+
+#right{
+	/*Add your CSS here!*/
+	
+}
+
+table {
+	border: #000000 1px solid;
+	background-color: #acd1b2;
+	float: right;
+	margin-right: 10px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+td {
+	height: 75px;
+	width: 75px;
+}
+
+td img {
+	height: 75px;
+	width: 75px;
+	box-shadow: none;
+}
+
+th {
+	font-family: Verdana;
+	font-size: 1em;
+	font-weight: normal;
+	color: #3c4543
+}
+
+#bottom_left{
+	border-bottom-left-radius: 15px;
+}
+
+#bottom_right{
+	border-bottom-right-radius: 15px;
+}
+
+#footer{
+	/*Add your CSS here!*/
+	
+	position: relative;
+	bottom: -20px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	height: 75px;
+	background-color: #3c4543;
+}
+
+#button{
+	border: 2px solid #000000;
+	float:left;
+	position: relative;
+	left: 229px;
+	bottom: -20px;
+	border-radius: 5px;
+	background-color: #cc0323;
+	height: 30px;
+	width: 150px;
+	
+}
+
+#button p{
+	position: relative;
+	bottom: 10px;
+	font-size: 0.8em;
+	color: #acd1b2;
+	text-align: center;
+}
+
+.bold{
+	font-family: tahoma;
+	font-weight: bold;
+	font-size: 1.2em;
+	font-variant: small-caps;
+	color: #ffffff;
+}
+	
+23. Displaying it properly
+body {
+	background-color: #b7d1c4
+}
+
+h2 {
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	color: #acd1b2;
+}
+
+img {
+	height: 170px;
+	width: 170px;
+	box-shadow: rgba(0,0,0,0.2) 10px 10px;
+
+}
+
+#navbar {
+	/*Add your CSS here!*/
+	position:fixed;
+	margin-top:-10px;
+	left:50%;
+	margin-left:-254px;
+}
+
+#header {
+	position: relative;
+	top: -10px;
+	background-color: #3c4543;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+ul{
+	list-style-type: none;
+	position: fixed;
+	margin: -10px;
+}
+
+li {
+	/*Add your CSS here!*/
+	display:inline;
+	padding:5px;
+	border: 2px solid #000000;
+	font-family: Futura, Tahoma, sans-serif;
+	color: #ffffff;
+	border-radius: 5px 5px;
+	background-color: #cc0323
+}
+
+#left{
+	/*Add your CSS here!*/
+	
+}
+
+p {
+	font-family: Tahoma;
+	font-size: 1em;
+}
+
+#right{
+	/*Add your CSS here!*/
+	
+}
+
+table {
+	border: #000000 1px solid;
+	background-color: #acd1b2;
+	float: right;
+	margin-right: 10px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+td {
+	height: 75px;
+	width: 75px;
+}
+
+td img {
+	height: 75px;
+	width: 75px;
+	box-shadow: none;
+}
+
+th {
+	font-family: Verdana;
+	font-size: 1em;
+	font-weight: normal;
+	color: #3c4543
+}
+
+#bottom_left{
+	border-bottom-left-radius: 15px;
+}
+
+#bottom_right{
+	border-bottom-right-radius: 15px;
+}
+
+#footer{
+	/*Add your CSS here!*/
+	
+	position: relative;
+	bottom: -20px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	height: 75px;
+	background-color: #3c4543;
+}
+
+#button{
+	border: 2px solid #000000;
+	float:left;
+	position: relative;
+	left: 229px;
+	bottom: -20px;
+	border-radius: 5px;
+	background-color: #cc0323;
+	height: 30px;
+	width: 150px;
+	
+}
+
+#button p{
+	position: relative;
+	bottom: 10px;
+	font-size: 0.8em;
+	color: #acd1b2;
+	text-align: center;
+}
+
+.bold{
+	font-family: tahoma;
+	font-weight: bold;
+	font-size: 1.2em;
+	font-variant: small-caps;
+	color: #ffffff;
+}
+
+24. Floating right along
+body {
+	background-color: #b7d1c4
+}
+
+h2 {
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	color: #acd1b2;
+}
+
+img {
+	height: 170px;
+	width: 170px;
+	box-shadow: rgba(0,0,0,0.2) 10px 10px;
+
+}
+
+#navbar {
+	/*Add your CSS here!*/
+	position:fixed;
+	margin-top:-10px;
+	left:50%;
+	margin-left:-254px;
+}
+
+#header {
+	position: relative;
+	top: -10px;
+	background-color: #3c4543;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+ul{
+	list-style-type: none;
+	position: fixed;
+	margin: -10px;
+}
+
+li {
+	/*Add your CSS here!*/
+	display:inline;
+	padding:5px;
+	border: 2px solid #000000;
+	font-family: Futura, Tahoma, sans-serif;
+	color: #ffffff;
+	border-radius: 5px 5px;
+	background-color: #cc0323
+}
+
+#left{
+	/*Add your CSS here!*/
+	float:left;
+	width:45%;
+}
+
+p {
+	font-family: Tahoma;
+	font-size: 1em;
+}
+
+#right{
+	/*Add your CSS here!*/
+	float:right;
+	width:45%;
+}
+
+table {
+	border: #000000 1px solid;
+	background-color: #acd1b2;
+	float: right;
+	margin-right: 10px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+td {
+	height: 75px;
+	width: 75px;
+}
+
+td img {
+	height: 75px;
+	width: 75px;
+	box-shadow: none;
+}
+
+th {
+	font-family: Verdana;
+	font-size: 1em;
+	font-weight: normal;
+	color: #3c4543
+}
+
+#bottom_left{
+	border-bottom-left-radius: 15px;
+}
+
+#bottom_right{
+	border-bottom-right-radius: 15px;
+}
+
+#footer{
+	/*Add your CSS here!*/
+	clear:both;
+	position: relative;
+	bottom: -20px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	height: 75px;
+	background-color: #3c4543;
+}
+
+#button{
+	border: 2px solid #000000;
+	float:left;
+	position: relative;
+	left: 229px;
+	bottom: -20px;
+	border-radius: 5px;
+	background-color: #cc0323;
+	height: 30px;
+	width: 150px;
+	
+}
+
+#button p{
+	position: relative;
+	bottom: 10px;
+	font-size: 0.8em;
+	color: #acd1b2;
+	text-align: center;
+}
+
+.bold{
+	font-family: tahoma;
+	font-weight: bold;
+	font-size: 1.2em;
+	font-variant: small-caps;
+	color: #ffffff;
+}
+
+25. You've done it!
+Click...
+
+**Build a Resume**
+1. What you'll be building
+Click...
+
+2. Laying out your divs
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+		<title></title>
+	</head>
+	<body>
+	    <div id="header">header</div>
+	    <div class="left">left</div>
+	    <div class="right">right</div>
+	    <div id="footer">footer</div>
+	</body>
+</html>
+
+3. Sizing and color
+div {
+    border-radius:5px;
+    height:10px;
+    width:10px;
+    color:yellow;
+}
+
+4. Fixing your header
+div {
+    border-radius:5px;
+    height:10px;
+    width:10px;
+    color:yellow;
+}
+#header {
+    position:fixed;
+    z-index:1;
+}
+
+5. Floating left and right
+div {
+    border-radius:5px;
+    height:10px;
+    width:10px;
+    color:yellow;
+}
+#header {
+    position:fixed;
+    z-index:1;
+}
+.left {
+ float:left;   
+}
+.right {
+ float:right;   
+}
+
+6. Clearing the footer
+div {
+    border-radius:5px;
+    height:10px;
+    width:10px;
+    color:yellow;
+}
+#header {
+    position:fixed;
+    z-index:1;
+}
+.left {
+ float:left;   
+}
+.right {
+ float:right;   
+}
+
+#footer {
+ clear:both;   
+}
+
+7. Headings, paragraphs, and lists
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+		<title></title>
+	</head>
+	<body>
+	    <h4>Header 4</h4>
+	    <p>Paragraph</p>
+	    <ol> 
+	        <li>1st element of the list</li>
+	        <li>2nd element of the list</li>
+	        <li>3rd element of the list</li>
+	    </ol>
+	    <div id="header">header</div>
+	    <div class="left">left</div>
+	    <div class="right">right</div>
+	    <div id="footer">footer</div>
+	</body>
+</html>
+
+8. Victory!
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+		<title></title>
+	</head>
+	<body>
+		<div id="header">
+			<p id="name">Your Name Here</p>
+			<a href="mailto:you@yourdomain.com"><p id="email">you@yourdomain.com</p></a>
+		</div>
+		<div class="left"></div>
+		<div class="right">
+			<h4>Objective</h4>
+			<p>To take a position as a software engineer.</p>
+			<h4>Experience</h4>
+			<p>Junior Developer, Software Company (2010 - Present)</p>
+			<ul>
+				<li>Designed and implemented end-user features for Flagship Product</li>
+				<li>Wrote third-party JavaScript and Ruby libraries</li>
+			</ul>
+			<h4>Skills</h4>
+			<p>Languages: C#, JavaScript, Python, Ruby</p>
+			<p>Frameworks: .NET, Node.js, Django, Ruby on Rails</p>
+			<h4>Education</h4>
+			<p>BS, Economics, My University</p>
+			<ul>
+				<li>Award for best senior thesis</li>
+				<li>GPA: 3.8</li>
+			</ul>
+		</div>
+		<div id="footer">
+			<p>123 Your Street, Anytown, State 12345-6789 | Tel: (555) 555-5555</p>
+		</div>
+	</body>
+</html>
+
+div {
+	border-radius: 5px;
+}
+
+#header {
+	z-index: 1;
+	position: fixed;
+	width: 97.5%;
+	margin-top: -20px;
+	height: 60px;
+	background-color: #668284;
+	margin-bottom: 10px;
+}
+
+#name {
+	float:left;
+	margin-left: 5px;
+	padding-top: 5px;
+	font-size: 16px;
+	font-family: Verdana, sans-serif;
+	color: #ffffff;
+}
+
+#email{
+	float:right;
+	margin-right: 5px;
+	padding-top: 5px;
+	font-size: 16px;
+	font-family: Verdana, sans-serif;
+	color: #ffffff;
+}
+
+h4 {
+	margin-left: 5px;
+	margin-bottom: 15px;
+	font-family: Verdana, sans-serif;
+}
+
+.right p {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: -10px;
+	font-family: Garamond, serif;
+	color: #000000;
+}
+
+li {
+	list-style-type: square;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+.left {
+	position: relative;
+	float: left;
+	margin-top: 50px;
+	width: 10%;
+	height: 400px;
+	background-color: #B9D7D9;
+	margin-bottom: 10px;
+}
+
+.right {
+	position: relative;
+	float: right;
+	margin-top: 50px;
+	width: 88%;
+	height: 400px;
+	background-color: #F4EBC3;
+	margin-bottom: 10px;
+}
+
+#footer {
+	position: relative;
+	height: 50px;
+	background-color: #668284;
+	clear: both;
+	font-family: Verdana, sans-serif;
+	font-size: 14px;
+	text-align: center;
+	color: #ffffff;
+}
+
+#footer p {
+	position: relative;
+	padding-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
