@@ -1,0 +1,89 @@
+Installing Docker
+wget -qO- https://get.docker.com/ | sh
+sudo usermod -aG docker $(whoami)
+sudo apt-get -y install python-pip
+sudo pip install docker-compose
+
+Just information.
+So far we've been running docker-compose up on our own and using CTRL-C to shut it down. This allows debug messages to be displayed in the terminal window. This isn't ideal though, when running in production you'll want to have docker-compose act more like a service. One simple way to do this is to just add the -d option when you up your session:
+•	docker-compose up -d
+docker-compose will now fork to the background. 
+To show your group of Docker containers (both stopped and currently running), use the following command:
+•	docker-compose ps
+To stop all running Docker containers for an application group, issue the following command in the same directory as the docker-compose.yml file used to start the Docker group:
+•	docker-compose stop
+In some cases, Docker containers will store their old information in an internal volume. If you want to start from scratch you can use the rm command to fully delete all the containers that make up your container group:
+•	docker-compose rm 
+If you try any of these commands from a directory other than the directory that contains a Docker container and .yml file, it will complain and not show you your containers:
+Output from wrong directory
+       Can't find a suitable configuration file in this directory or any parent. Are you in the right directory?        Supported filenames: docker-compose.yml, docker-compose.yaml, fig.yml, fig.yaml
+
+Step 5 — Accessing the Docker Container Filesystem (Optional)
+
+If you need to work on the command prompt inside a container, you can use the docker exec command. 
+The Hello World! example exits after it is run, so we need to start a container that will keep running so we can then use docker exec to access the filesystem for the container. Let's take a look at the Nginx image from Docker Hub.
+Create a new directory for it and change into it:
+•	mkdir ~/nginx && cd $_
+Create a docker-compose.yml file in our new directory:
+•	nano docker-compose.yml
+and paste in the following:
+~/nginx/docker-compose.yml
+nginx:  image: nginx 
+Save the file and exit. We just need to start the Nginx container as a background process with the following command:
+•	docker-compose up -d
+The Nginx image will be downloaded and then the container will be started in the background.
+Now we need the CONTAINER ID for the container. List of all the containers that are running:
+•	docker ps
+You will see something similar to the following:
+Output of `docker ps`
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMESe90e12f70418        nginx               "nginx -g 'daemon off"   6 minutes ago       Up 5 minutes        80/tcp, 443/tcp     nginx_nginx_1 
+Note: Only running containers are listed with the docker ps command.
+
+If we wanted to make a change to the filesystem inside this container, we'd take its ID (in this example e90e12f70418) and use docker exec to start a shell inside the container:
+•	docker exec -it e90e12f70418 /bin/bash
+The -t option opens up a terminal, and the -i option makes it interactive. The /bin/bash options opens a bash shell to the running container. Be sure to use the ID for your container.
+You will see a bash prompt for the container similar to:
+root@e90e12f70418:/# 
+From here, you can work from the command prompt. Keep in mind, however, that unless you are in a directory that is saved as part of a data volume, your changes will disappear as soon as the container is restarted. Another caveat is that most Docker images are created with very minimal Linux installs, so some of the command line utilities and tools you are used to may not be present. 
+
+How To Install Wordpress and PhpMyAdmin with Docker Compose on Ubuntu 14.04
+
+https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-and-phpmyadmin-with-docker-compose-on-ubuntu-14-04
+mkdir ~/wordpress && cd $_
+touch ~/wordpress/docker-compose.yml
+nano ~/wordpress/docker-compose.yml
+
+wordpress:  
+image: wordpress
+  links: 
+   - wordpress_db:mysql
+ ports: 
+   - 8080:80
+wordpress_db:
+image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: examplepass
+phpmyadmin:
+  image: corbinu/docker-phpmyadmin
+  links:
+    - wordpress_db:mysql  ports:
+- 8181:80
+  environment:
+    MYSQL_USERNAME: root
+    MYSQL_ROOT_PASSWORD: examplepass
+Now start up the application group again:
+•	docker-compose up -d
+You will see PhpMyAdmin being installed. Once it is finished, visit your server's IP address again (this time using port 8181, e.g. http://123.456.789.123:8181). You'll be greeted by the PhpMyAdmin login screen.
+Go ahead and login using username root and password you set in the YAML file, and you'll be able to browse your database. You'll notice that the server includes a wordpress database, which contains all the data from your WordPress install. 
+Step 4 — Creating the WordPress Site
+
+Since all the files for your new WordPress site are stored inside your Docker container, what happens to your files when you stop the container and start it again?
+By default, the document root for the WordPress container is persistent. This is because the WordPress image from the Docker Hub is configured this way. If you make a change to your WordPress site, stop the application group, and start it again, your website will still have the changes you made.
+Let's try it.
+Go to your WordPress from a web browser (e.g. http://123.456.789.123:8080). Edit the Hello World! post that already exists. Then, stop all the Docker containers with the following command:
+•	docker-compose stop
+Try loading the WordPress site again. You will see that the website is down. Start the Docker containers again:
+•	docker-compose up -d
+Again, load the WordPress site. You should see your blog site and the change you made earlier. This shows that the changes you make are saved even when the containers are stopped.
+
+
