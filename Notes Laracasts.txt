@@ -1,0 +1,302 @@
+apt-get install php5-cli
+
+sudo apt-get install software-properties-common python-software-properties
+
+sudo add-apt-repository ppa:ondrej/php
+
+sudo apt-get update
+
+sudo apt-get install php5.6
+
+sudo apt-get install curl php5-cli git
+
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
+sudo php -- --install-dir=/usr/local/bin --filename=composer
+
+If you want it to be automatically set, it depends on the shell you are using. For bash you can append this line to $HOME/.bashrc using your favourite editor or type the following on the shell
+
+echo 'export PATH="$PATH:$HOME/.composer/vendor/bin"' >> ~/.bashrc
+
+I had the same problem and after reading this answer I solve it updating the .composer folder permissions:
+
+sudo chown -R $USER:$USER /home/$USER/.composer
+
+sudo apt-get install libapache2-mod-php5
+
+sudo apt-get install php5-mysql
+
+sudo apt-get install php7.0 libapache2-mod-php7.0 php7.0-mbstring php7.0-zip php7.0-xml php7.0-mysql
+
+composer global require "laravel/installer"
+
+echo 'export PATH="$PATH:$HOME/.composer/vendor/bin"' >> ~/.bashrc
+
+sudo service apache2 restart
+
+For Sublime-Text-3:
+
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+
+sudo apt-get update
+
+sudo apt-get install sublime-text-installer
+
+lesson #3
+
+route.php in laravel 5.2 it's web routes/web.php in laravel 5.3
+
+In project directory to run server:
+
+php artisan serve
+
+Route::get('/', function () {
+
+$people = ['Taylor', 'Matt', 'Jeffrey'];
+
+return View:make(); //both funcionally equal
+
+return view('welcome', []); //both funcionally equal
+
+});
+
+<li> {{ $person }} </li> NO <li> <? $person /> </li>
+
+Laravel #4
+
+php artisan help make:controller //to get help about make:contoller
+
+cd ./project
+
+php artisan serve
+
+php artisan make:controller PagesController
+
+@yield ('content') //mean is to find any page with content.blade.php and yield it into the page
+
+//for installing node js
+
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+
+sudo apt-get install -y nodejs
+
+sudo npm install --global gulp
+
+laravel #7
+
+touch ./database/database.sqlite
+
+php artisan make:migration create_cards_table --create=cards
+
+in project in file '.env' comment all lines with DB except first line just rename mysql with sqlite
+
+For Ubuntu 14.04
+
+sudo apt-get install php5-sqlite
+
+sudo service apache2 restart
+
+In ubuntu 16.04 there is no php5-sqlite
+
+sudo apt-get install php7.0-sqlite
+
+sudo service apache2 restart
+
+php artisan tinker
+
+>>>DB::table('cards')->insert(['title'=>'My New Cards', 'created_at' => new DateTime, 'updated_at' =>new DateTime]);
+
+>>> DB::table('cards')->where('title','My New Cards')->delete();
+
+sudo apt-get -y install php5-mysql
+
+cd ./project
+
+php artisan serve
+
+laravel #8
+
+av just run the command php artisan make:migration create_users_table and am getting this error
+
+include(/home/vagrant/www/chatty/vendor/composer/../../database/migrations/ 2014_10_12_000000_create_users_table.php): failed to open stream: No such f ile or directory
+
+can anyone help please?
+
+It happens when you manually delete migration .php file. Now you should run composer dump-autoload to get rid of that error and re-run migration creation command.
+
+marat@ubuntu:~/project$ php artisan migrate
+
+Migrated: 2017_01_16_200750_create_notes_table
+
+marat@ubuntu:~/project$ php artisan make:model Note
+
+$note->body = 'Some note for the card.';
+
+$card = App\Card::first();
+
+$card->notes()->save($note);
+
+close and in php artisan tinker
+
+$note->body = 'Here is another note.';
+
+$card = App\Card::first();
+
+$card->notes()->save($note);
+
+close and in php artisan tinker
+
+$note->body = 'Yet another note about this card.';
+
+$card = App\Card::first();
+
+$card->notes()->save($note);
+
+Laravel #8
+
+For anyone else getting this error and wanting the quick official answer.
+
+https://laravel.com/docs/5.3/c...
+
+---- paste from link above ----
+
+Anytime you define a HTML form in your application, you should
+
+include a hidden CSRF token field in the form so that the CSRF
+
+protection middleware can validate the request. You may use the csrf_field helper to generate the token field:
+
+<form method="POST" action="/profile">
+
+{{ csrf_field() }}
+
+Laravel #9
+
+Changed in web.php
+
+<?php
+
+Route::get('cards','CardsController@index');
+
+Route::get('cards/{card}','CardsController@show');
+
+Route::post('cards/{card}/notes','NotesController@store');
+
+
+Route::post('/notes/{note}/edit','NotesController@edit'); CHANGED TO Route::get('/notes/{note}/edit','NotesController@edit'); and everything started to work
+
+Route::patch('/notes/{note}','NotesController@update');
+
+php artisan make:migration create_users_table --create=users
+
+php artisan migrate
+
+Hi I have a problem with this part. In fact, when I had finish the video I had an error : RelationNotFoundException in RelationNotFoundException.php line 20:
+
+Call to undefined relationship [user] on model [App\Note]. I don't know why I have this because I have exactly the same code as the video.
+
+We need to indicate that every single note belongs to a user. Add it to your Notes model
+
+public function user()
+
+{
+
+return $this->belongsTo(User::class);
+
+}
+
+laravel #11
+
+App\Note::find(3)->delete();
+
+App\Note::find(2)->delete();
+
+Since Laravel 5.2.25 the 'web' middleware is automatically included. DO NOT write it into routes.php, or your app might start acting strangely.
+
+laravel #12
+
+laravel#13
+
+laravel new some-project
+
+cd ./some-project
+
+php artisan //for help
+
+php artisan make:auth //good it doing at the beginning
+
+touch database/database.sqlite
+
+in .enc file!!!
+
+Change this
+
+DB_CONNECTION=mysql
+
+DB_HOST=127.0.0.1
+
+DB_PORT=3306
+
+DB_DATABASE=homestead
+
+DB_USERNAME=homestead
+
+DB_PASSWORD=secret
+
+to this
+
+DB_CONNECTION=sqlite
+
+DB_FILE=database.sqlite
+
+php artisan migrate
+
+Swift_TransportException in AbstractSmtpTransport.php line 162:
+
+Cannot send message without a sender address
+
+I got the same issue even after restarting the server. But, when I stopped the server and did 'php artisan config:cache' and then restarted the server. Now it works.
+
+laravel #14
+
+cd ../project
+
+php artisan make:auth
+
+php artisan migrate
+
+in web.php
+
+<?php
+
+Route::get('cards','CardsController@index');
+
+Route::get('cards/{card}','CardsController@show');
+
+Route::post('cards/{card}/notes','NotesController@store');
+
+Route::get('/notes/{note}/edit','NotesController@edit');
+
+Route::patch('/notes/{note}','NotesController@update');
+
+Auth::routes();
+
+Route::get('/dashboard', 'HomeController@index');
+
+laravel #15
+
+laravel #16
+
+laravel #17
+
+Bootstrapping With Service Providers
+
+$this->app->make('filesystem') //all the same result
+
+app('filesystem') //all the same result
+
+App::make('filesystem') //all the same result
+
+$this->app['filesystem']; //all the same result
+
+laravel #18
